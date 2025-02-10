@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Homing : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Rigidbody2D rb;
@@ -8,8 +8,7 @@ public class Bullet : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] private float bulletSpeed = 5f;
     [SerializeField] private int bulletDamage = 1;
-    [SerializeField] private float bulletLifetime = 3f;
-    [SerializeField] private bool isAOE = false;
+    [SerializeField] private float bulletLifetime = 5f;
 
     private Transform target;
 
@@ -17,16 +16,23 @@ public class Bullet : MonoBehaviour
     {
         Destroy(gameObject, bulletLifetime);
     }
-
-    public void SetTarget(Transform target)
+    void FixedUpdate()
     {
-        this.target = target;
-        if (target != null)
-        {
-            Vector2 direction = (target.position - transform.position).normalized;
-            rb.linearVelocity = direction * bulletSpeed;
-        }
+        if(!target) return;
+        Vector2 direction = (target.position - transform.position).normalized;
+        rb.linearVelocity = direction * bulletSpeed;
     }
+    public void SetTarget(Transform _target)
+    {
+        if (_target == null)
+        {
+            Debug.LogError("HomingBullet: Target is null! Check AcePilot's Shoot() method.");
+            return;
+        }
+        target = _target;
+    }
+
+
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -35,9 +41,6 @@ public class Bullet : MonoBehaviour
         {
             enemyHealth.TakeDamage(bulletDamage);
         }
-        if (!isAOE)
-        {
-            Destroy(gameObject);
-        } 
+        Destroy(gameObject);
     }
 }

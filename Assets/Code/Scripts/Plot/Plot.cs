@@ -5,9 +5,15 @@ public class Plot : MonoBehaviour
     [Header("References")]
     [SerializeField] private SpriteRenderer sr;
     [SerializeField] private Color hoverColor;
+    [SerializeField] private bool isWater;
     private GameObject tower;
     private Color startColor;
+    private Plot main;
 
+    void Awame()
+    {
+        main = this;
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,7 +27,7 @@ public class Plot : MonoBehaviour
     }
 
     private void OnMouseEnter()
-    {
+    {   
         sr.color = hoverColor;
     }
 

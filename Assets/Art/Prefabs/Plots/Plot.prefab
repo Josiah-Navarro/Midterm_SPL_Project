@@ -148,4 +148,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sr: {fileID: 311954811710190440}
-  hoverColor: {r: 0.2264151, g: 0.06301175, b: 0.06301175, a: 0}
+  hoverColor: {r: 1, g: 1, b: 1, a: 0}
+  isWater: 1

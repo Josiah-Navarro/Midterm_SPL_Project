@@ -12,14 +12,14 @@ public class Turret : MonoBehaviour
     [Header("Attribute")]
     [SerializeField] private float targetingRange = 5f; // Range duh
     [SerializeField] private float rotationSpeed = 10f; //Rotation Speed duh
-    [SerializeField] private float attackSpeed = 1f; //Attack SPeed
+    [SerializeField] private float attackSpeed = 1f; //Attack Speed
     private Transform target;
     private float timeUntilFire; //Reload
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        // Initialization code can go here if needed
     }
 
     // Update is called once per frame
@@ -32,17 +32,21 @@ public class Turret : MonoBehaviour
         }
 
         RotateTowardsTarget();
-        if (!CheckTargetIsInRage()){
+        if (!CheckTargetIsInRange())
+        {
             target = null;
-        } else {
+        }
+        else
+        {
             timeUntilFire += Time.deltaTime;
-            if (timeUntilFire >= 1f/attackSpeed)
+            if (timeUntilFire >= 1f / attackSpeed)
             {
                 Shoot();
                 timeUntilFire = 0;
             }
         }
     }
+
     private void Shoot()
     {
         GameObject bullet = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
@@ -50,7 +54,7 @@ public class Turret : MonoBehaviour
         bulletScript.SetTarget(target);
     }
 
-    private bool CheckTargetIsInRage()
+    private bool CheckTargetIsInRange()
     {
         return Vector2.Distance(target.position, transform.position) <= targetingRange;
     }
@@ -64,6 +68,8 @@ public class Turret : MonoBehaviour
 
     private void FindTarget()
     {
+        if (target != null) return;
+
         RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, targetingRange, Vector2.zero, 0f, enemyMask);
         if (hits.Length > 0)
         {
@@ -71,10 +77,11 @@ public class Turret : MonoBehaviour
         }
     }
 
+#if UNITY_EDITOR
     private void OnDrawGizmosSelected()
     {
-        // Corrected the typo here as well
         Handles.color = Color.cyan;
         Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
     }
+#endif
 }
