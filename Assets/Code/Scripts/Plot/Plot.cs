@@ -6,40 +6,61 @@ public class Plot : MonoBehaviour
     [SerializeField] private SpriteRenderer sr;
     [SerializeField] private Color hoverColor;
     [SerializeField] private bool isWater;
+    
     private GameObject tower;
     private Color startColor;
-    private Plot main;
 
-    void Awame()
+    void Awake()
     {
-        main = this;
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        startColor = sr.color;
-    }
+        if (sr == null)
+        {
+            sr = GetComponent<SpriteRenderer>(); // Ensure SpriteRenderer is assigned
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (isWater)
+        {
+            startColor = Color.blue; // Water plots are blue
+            hoverColor = new Color(0.5f, 0.7f, 1f); // Lighter blue for highlight
+        }
+        else
+        {
+            startColor = Color.grey; // Land plots start as grey
+            hoverColor = Color.white; // Land plots highlight as white
+        }
+
+        if (sr != null)
+            sr.color = startColor;
     }
 
     private void OnMouseEnter()
-    {   
-        sr.color = hoverColor;
+    {
+        if (sr != null)
+            sr.color = hoverColor; 
     }
 
     private void OnMouseExit()
     {
-        sr.color = startColor;
+        if (sr != null)
+            sr.color = startColor;
     }
 
     private void OnMouseDown()
     {
         if (tower != null) return;
+
         Tower towerToBuild = BuildManager.main.GetSelectedTower();
+        if (towerToBuild == null)
+        {
+            Debug.LogWarning("No tower selected!");
+            return;
+        }
+
+        if (towerToBuild.isWaterTower != isWater) 
+        {
+            Debug.Log("Cannot place this tower here!");
+            return;
+        }
+
         if (towerToBuild.cost > LevelManager.main.money)
         {
             Debug.Log("You can't afford this tower");

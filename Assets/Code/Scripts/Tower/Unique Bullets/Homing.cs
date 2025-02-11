@@ -36,7 +36,7 @@ public class Homing : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Health enemyHealth = other.gameObject.GetComponent<Health>();
+        Enemy enemyHealth = other.gameObject.GetComponent<Enemy>();
         if (enemyHealth != null)
         {
             enemyHealth.TakeDamage(bulletDamage);

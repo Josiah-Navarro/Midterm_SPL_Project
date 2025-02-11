@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEditor;
 public class PilotTower : MonoBehaviour
 {
     [Header("Movement Settings")]
@@ -19,7 +19,7 @@ public class PilotTower : MonoBehaviour
     [SerializeField] private LayerMask enemyMask;
 
     private Transform target;
-    private float fireCooldown = 0f;
+    private float fireCooldown = 1f;
 
     private void Update()
     {
@@ -93,5 +93,13 @@ public class PilotTower : MonoBehaviour
             }
         }
     }
+
+#if UNITY_EDITOR
+    private void OnDrawGizmosSelected()
+    {
+        Handles.color = Color.cyan;
+        Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
+    }
+#endif
 
 }

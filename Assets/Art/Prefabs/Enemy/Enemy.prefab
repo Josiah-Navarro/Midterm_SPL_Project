@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 579367259269635653}
   - component: {fileID: 1671278763716707853}
   - component: {fileID: 3283900322285016772}
-  - component: {fileID: 5726690367668758839}
-  - component: {fileID: 2563457240641136196}
+  - component: {fileID: 2004372515539501369}
+  - component: {fileID: -805560872134368823}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
@@ -154,21 +154,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &5726690367668758839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996180211710454622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5deca338f54e2364bb818b56029980d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitPoints: 5
-  currencyWorth: 10
---- !u!114 &2563457240641136196
+--- !u!114 &2004372515539501369
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181,4 +167,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 579367259269635653}
-  moveSpeed: 3
+--- !u!114 &-805560872134368823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996180211710454622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eff81653d0c59694383a692f1c661cb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 579367259269635653}
+  hitpoints: 10
+  worth: 50
+  originalSpeed: 2
+  isFrozen: 0

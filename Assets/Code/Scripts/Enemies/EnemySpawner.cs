@@ -5,7 +5,7 @@ using System.Collections;
 public class EnemySpawner : MonoBehaviour
 {
     [Header("Reference")]
-    [SerializeField] private Enemy[] enemies; 
+    [SerializeField] private EnemyManager[] enemies; 
 
     [Header("Attributes")]
     [SerializeField] private float enemiesPerSecond = 0.5f;
@@ -76,7 +76,7 @@ public class EnemySpawner : MonoBehaviour
     private int EnemiesPerWave()
     {
         int totalEnemies = 0;
-        foreach (Enemy enemy in enemies)
+        foreach (EnemyManager enemy in enemies)
         {
             totalEnemies += Mathf.RoundToInt(enemy.spawnCount * Mathf.Pow(currentWave, difficultyScalingFactor));
         }
@@ -94,13 +94,13 @@ public class EnemySpawner : MonoBehaviour
     private GameObject ChooseRandomEnemy()
     {
         int totalSpawnWeight = 0;
-        foreach (Enemy enemy in enemies)
+        foreach (EnemyManager enemy in enemies)
         {
             totalSpawnWeight += enemy.spawnCount;
         }
 
         int randomWeight = Random.Range(0, totalSpawnWeight);
-        foreach (Enemy enemy in enemies)
+        foreach (EnemyManager enemy in enemies)
         {
             if (randomWeight < enemy.spawnCount)
                 return enemy.prefab;

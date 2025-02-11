@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEditor;
 public class AcePilot : MonoBehaviour
 {   
     [Header("Movement Settings")]
@@ -111,4 +111,12 @@ public class AcePilot : MonoBehaviour
         bulletScript.SetTarget(target);
         useLeftFirePoint = !useLeftFirePoint;
     }
+
+#if UNITY_EDITOR
+    private void OnDrawGizmosSelected()
+    {
+        Handles.color = Color.cyan;
+        Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
+    }
+#endif
 }
