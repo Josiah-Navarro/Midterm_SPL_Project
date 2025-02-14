@@ -105,11 +105,11 @@ public class AcePilot : MonoBehaviour
 
     private void Shoot()
     {
-        Transform firePoint = useLeftFirePoint ? leftFirePoint : rightFirePoint;
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-        Homing bulletScript = bullet.GetComponent<Homing>();
-        bulletScript.SetTarget(target);
-        useLeftFirePoint = !useLeftFirePoint;
+        // Transform firePoint = useLeftFirePoint ? leftFirePoint : rightFirePoint;
+        // GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        // Homing bulletScript = bullet.GetComponent<Homing>();
+        // bulletScript.SetTarget(target);
+        // useLeftFirePoint = !useLeftFirePoint;
     }
 
 #if UNITY_EDITOR

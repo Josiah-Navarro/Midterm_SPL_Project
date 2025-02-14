@@ -545,7 +545,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ace Tower
+  m_text: 'Cobol Tower
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11915,9 +11917,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Pilot Tower
-
-'
+  m_text: Eniac Tower
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12615,9 +12615,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1876241287}
+  - component: {fileID: 1876241292}
   - component: {fileID: 1876241290}
   - component: {fileID: 1876241289}
   - component: {fileID: 1876241288}
+  - component: {fileID: 1876241291}
   m_Layer: 0
   m_Name: Level Manager
   m_TagString: Untagged
@@ -12676,28 +12678,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towers:
   - name: Basic Turret
-    cost: 100
+    cost: 50
     prefab: {fileID: 5135398175848266765, guid: 7998fae61bae67545805ceb3b28f7b41, type: 3}
     isWaterTower: 0
   - name: Sniper Turret
-    cost: 380
+    cost: 50
     prefab: {fileID: 5135398175848266765, guid: c7ee0d6222c08c2479cd2dcc5731861f, type: 3}
     isWaterTower: 0
   - name: Minigun Turret
-    cost: 350
+    cost: 50
     prefab: {fileID: 5135398175848266765, guid: 3b9c52457e615ab45b0c3a5735160e3b, type: 3}
     isWaterTower: 0
-  - name: Ace Tower
+  - name: Cobol Tower
     cost: 50
-    prefab: {fileID: 5135398175848266765, guid: 480bfea8e4e66564c876cbc7797607f4, type: 3}
+    prefab: {fileID: 5135398175848266765, guid: d8e2818b4db5ef244b1f2a5bac6c33da, type: 3}
     isWaterTower: 0
-  - name: Pilot Tower
+  - name: ENIAC Tower
     cost: 50
-    prefab: {fileID: 5135398175848266765, guid: f968e31f842883545a51ab21d913b01a, type: 3}
+    prefab: {fileID: 5135398175848266765, guid: ab925aabbaab63b4d84b240ca08f8001, type: 3}
     isWaterTower: 0
-  - name: Ice Tower
+  - name: ENIAC Tower
     cost: 50
-    prefab: {fileID: 5135398175848266765, guid: 8268c9499a667d843a53a2ae2ceff8ac, type: 3}
+    prefab: {fileID: 5135398175848266765, guid: ab925aabbaab63b4d84b240ca08f8001, type: 3}
     isWaterTower: 0
   - name: Sub Tower
     cost: 50
@@ -12744,6 +12746,31 @@ MonoBehaviour:
   - {fileID: 1611512438}
   money: 100
   health: 10
+--- !u!114 &1876241291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876241285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2450e636536a2245b64c3e5fa380333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentRound: 0
+--- !u!114 &1876241292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876241285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfba7eeba7d8a5a41bc0a701af1d1063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1894281167
 GameObject:
   m_ObjectHideFlags: 0
@@ -12854,7 +12881,7 @@ GameObject:
   - component: {fileID: 1898145330}
   - component: {fileID: 1898145329}
   m_Layer: 5
-  m_Name: Pilot Turret
+  m_Name: ENIAC Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13270,7 +13297,7 @@ GameObject:
   - component: {fileID: 1926573573}
   - component: {fileID: 1926573572}
   m_Layer: 5
-  m_Name: Ace Turret
+  m_Name: Cobol Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

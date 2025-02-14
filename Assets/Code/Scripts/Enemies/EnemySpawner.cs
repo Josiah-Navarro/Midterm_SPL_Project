@@ -5,7 +5,7 @@ using System.Collections;
 public class EnemySpawner : MonoBehaviour
 {
     [Header("Reference")]
-    [SerializeField] private EnemyManager[] enemies; 
+    [SerializeField] private EnemySerializable[] enemies; 
 
     [Header("Attributes")]
     [SerializeField] private float enemiesPerSecond = 0.5f;
@@ -20,9 +20,14 @@ public class EnemySpawner : MonoBehaviour
     private int enemiesAlive;
     private int enemiesLeftToSpawn;
     private bool isSpawning = false;
+    public static EnemySpawner Instance;
 
     private void Awake()
     {
+         if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
         onEnemyDestroy.AddListener(EnemyDestroyed);
     }
 
@@ -66,7 +71,7 @@ public class EnemySpawner : MonoBehaviour
         isSpawning = true;
     }
 
-    private void EndWave()
+    public void EndWave()
     {
         isSpawning = false;
         timeSinceLastSpawn = 0f;
@@ -76,7 +81,7 @@ public class EnemySpawner : MonoBehaviour
     private int EnemiesPerWave()
     {
         int totalEnemies = 0;
-        foreach (EnemyManager enemy in enemies)
+        foreach (EnemySerializable enemy in enemies)
         {
             totalEnemies += Mathf.RoundToInt(enemy.spawnCount * Mathf.Pow(currentWave, difficultyScalingFactor));
         }
@@ -94,13 +99,13 @@ public class EnemySpawner : MonoBehaviour
     private GameObject ChooseRandomEnemy()
     {
         int totalSpawnWeight = 0;
-        foreach (EnemyManager enemy in enemies)
+        foreach (EnemySerializable enemy in enemies)
         {
             totalSpawnWeight += enemy.spawnCount;
         }
 
         int randomWeight = Random.Range(0, totalSpawnWeight);
-        foreach (EnemyManager enemy in enemies)
+        foreach (EnemySerializable enemy in enemies)
         {
             if (randomWeight < enemy.spawnCount)
                 return enemy.prefab;

@@ -180,7 +180,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 579367259269635653}
+  enemyName: Tanky Enemy
   hitpoints: 100
   worth: 200
   originalSpeed: 0.75
+  isDestroyed: 0
   isFrozen: 0

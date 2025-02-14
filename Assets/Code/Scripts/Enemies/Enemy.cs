@@ -8,13 +8,15 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
 
     [Header("Attributes")]
+    [SerializeField] public string enemyName;
     [SerializeField] private int hitpoints = 5;
     [SerializeField] private int worth = 50;
     [SerializeField] private float originalSpeed = 2f;
 
+    private float distanceToEnd;
     private float moveSpeed;
     private float slowFactor = 1f;
-    private bool isDestroyed = false;
+    public bool isDestroyed = false;
     public bool isFrozen = false;
 
     private Transform target;
@@ -62,6 +64,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int dmg)
     {
         hitpoints -= dmg;
+        Debug.Log("Enemy Took "+ dmg);
         if (hitpoints <= 0 && !isDestroyed)
         {
             EnemySpawner.onEnemyDestroy.Invoke();
@@ -79,6 +82,21 @@ public class Enemy : MonoBehaviour
         moveSpeed = 0;
         StartCoroutine(UnfreezeAfter(duration));
     }
+    
+    public float GetDistanceToEnd()
+    {
+        if (pathIndex >= LevelManager.main.path.Length) return 0f; // Already at the end
+
+        float distance = Vector3.Distance(transform.position, LevelManager.main.path[pathIndex].position);
+
+        for (int i = pathIndex; i < LevelManager.main.path.Length - 1; i++)
+        {
+            distance += Vector3.Distance(LevelManager.main.path[i].position, LevelManager.main.path[i + 1].position);
+        }
+
+        return distance;
+    }
+
 
     private IEnumerator UnfreezeAfter(float duration)
     {

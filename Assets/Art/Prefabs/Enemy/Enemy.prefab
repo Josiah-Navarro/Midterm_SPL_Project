@@ -180,7 +180,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 579367259269635653}
+  enemyName: Normal Enemy
   hitpoints: 10
   worth: 50
   originalSpeed: 2
+  isDestroyed: 0
   isFrozen: 0

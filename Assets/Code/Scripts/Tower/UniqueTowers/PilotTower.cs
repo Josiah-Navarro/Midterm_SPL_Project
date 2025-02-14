@@ -35,7 +35,7 @@ public class PilotTower : MonoBehaviour
         fireCooldown += Time.deltaTime;
         if (fireCooldown >= 1f / fireRate)
         {
-            Shoot();
+            // Shoot();
             fireCooldown = 0;
         }
 
@@ -78,21 +78,21 @@ public class PilotTower : MonoBehaviour
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 
-    private void Shoot()
-    {
-        if (target == null) return;
+    // private void Shoot()
+    // {
+    //     if (target == null) return;
         
-        Transform[] firePoints = { frontFirePoint, backFirePoint, leftFirePoint, rightFirePoint };
-        foreach (Transform firePoint in firePoints)
-        {
-            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            Bullet bulletScript = bullet.GetComponent<Bullet>();
-            if (bulletScript != null)
-            {
-                bulletScript.SetTarget(target);
-            }
-        }
-    }
+    //     Transform[] firePoints = { frontFirePoint, backFirePoint, leftFirePoint, rightFirePoint };
+    //     foreach (Transform firePoint in firePoints)
+    //     {
+    //         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    //         BaseBullet bulletScript = bullet.GetComponent<BaseBullet>();
+    //         if (bulletScript != null)
+    //         {
+    //             bulletScript.SetTarget(target);
+    //         }
+    //     }
+    // }
 
 #if UNITY_EDITOR
     private void OnDrawGizmosSelected()

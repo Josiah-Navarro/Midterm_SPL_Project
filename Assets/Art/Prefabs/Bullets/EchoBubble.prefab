@@ -168,6 +168,6 @@ MonoBehaviour:
   bubbleSprite: {fileID: 3086912336710649455}
   popEffectPrefab: {fileID: 2678901564302260646, guid: 5ee82839f58880342b42eccfbdb8e1ba, type: 3}
   rb: {fileID: 4831015171384301129}
-  delayBeforePop: 0.3
-  damage: 10
+  delayBeforePop: 0.5
+  damage: 100
   moveSpeed: 5
