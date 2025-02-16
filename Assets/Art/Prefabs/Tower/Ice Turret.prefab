@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7328741373106442524}
   - component: {fileID: 7286752251033143568}
   - component: {fileID: 231457315241673592}
-  - component: {fileID: 82890901043207273}
+  - component: {fileID: 1060098448829891442}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c1b413d3d3c3d6d4c89f1029c59e2592, type: 3}
-  m_Color: {r: 0.016949654, g: 0, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -112,7 +112,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &82890901043207273
+--- !u!114 &1060098448829891442
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,17 +121,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1174580132879211512}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44fbb9423d1b64e4b8cdc28b6d77bb0d, type: 3}
+  m_Script: {fileID: 11500000, guid: 89f6b1540c586154eb282f8727ad4c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyLayerMask:
+  towerData: {fileID: 0}
+  turretRotationPoint: {fileID: 0}
+  enemyMask:
     serializedVersion: 2
-    m_Bits: 64
-  firePoint: {fileID: 1594518717203962253}
-  freezeWavePrefab: {fileID: 7342037630946578433, guid: 606e75ed59332b44ca34c7148da48667, type: 3}
-  attackCooldown: 2
-  freezeDuration: 1
+    m_Bits: 0
+  firingPoint: {fileID: 0}
+  waveInterval: 2
   waveRadius: 5
+  waveTimer: 0
 --- !u!1 &5135398175848266765
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0142481279c2fb74ba8cd1d002f733a2, type: 3}
+  m_Name: AlanTuringTowerData
+  m_EditorClassIdentifier: 
+  icon: {fileID: 3507745046214326360, guid: 1cf3971ff30f0e943b7b44153924265a, type: 3}
+  towerName: Alan Turing Tower
+  rarity: U
+  attackRange: 3
+  attackSpeed: 0
+  damage: 10
+  cost: 50
+  rotationSpeed: 1000
+  bulletPrefab: {fileID: 7342037630946578433, guid: 356beaef94a00384dab35dc261971738, type: 3}

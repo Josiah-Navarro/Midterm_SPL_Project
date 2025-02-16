@@ -45,4 +45,5 @@ public class EnemyMovement : MonoBehaviour
         Vector2 direction = (target.position - transform.position).normalized;
         rb.linearVelocity = direction * enemy.GetMoveSpeed();
     }
+    
 }

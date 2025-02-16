@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0142481279c2fb74ba8cd1d002f733a2, type: 3}
   m_Name: ENIACTowerData
   m_EditorClassIdentifier: 
+  icon: {fileID: 82603715764064623, guid: a8e87ab90e26e374b9b89c9dd6a8ded7, type: 3}
   towerName: ENIAC Tower
-  rank: SR
+  rarity: S
   attackRange: 8
   attackSpeed: 1
   damage: 10

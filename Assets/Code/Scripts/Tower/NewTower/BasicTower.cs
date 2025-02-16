@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BasicTower : BaseTower
 {
-    protected override void Shoot()
+    public override void Shoot()
     {
         GameObject bullet = Instantiate(towerData.bulletPrefab, firingPoint.position, Quaternion.identity);
         BaseBullet bulletScript = bullet.GetComponent<BaseBullet>();

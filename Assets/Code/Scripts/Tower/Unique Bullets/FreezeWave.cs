@@ -11,7 +11,6 @@ public class FreezeWave : MonoBehaviour
     private CircleCollider2D col;
     private SpriteRenderer sprite;
     private LayerMask enemyLayer; // Layer to detect enemies
-
     void Start()
     {
         col = GetComponent<CircleCollider2D>();

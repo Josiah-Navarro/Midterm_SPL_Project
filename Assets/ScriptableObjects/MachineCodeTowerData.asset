@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0142481279c2fb74ba8cd1d002f733a2, type: 3}
   m_Name: MachineCodeTowerData
   m_EditorClassIdentifier: 
+  icon: {fileID: 7859443449077724347, guid: 8c0441e67a48caf469b830940babb71e, type: 3}
   towerName: Machine Code Tower
-  rank: C
+  rarity: C
   attackRange: 3
   attackSpeed: 10
   damage: 1

@@ -1,16 +1,20 @@
-using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class RoundManager : MonoBehaviour
 {
     public static RoundManager Instance;
-    
-    public event Action OnRoundStart;
-    public event Action OnRoundEnd;
 
-    public int currentRound = 0;
-    private bool isRoundActive = false;
+    [Header("Round Settings")]
+    public float timeBetweenRounds = 10f;
+    public int currentRound = 1;
+
+    [Header("Events")]
+    public UnityEvent OnRoundStart = new UnityEvent();
+    public UnityEvent OnRoundEnd = new UnityEvent();
+
+    private bool roundActive = false;
 
     private void Awake()
     {
@@ -20,13 +24,47 @@ public class RoundManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-
-    public IEnumerator EndRound()
+    private void Start()
     {
-        isRoundActive = false;
-        Debug.Log($"Round {currentRound} ended!");
-        OnRoundEnd?.Invoke(); 
+        StartCoroutine(RoundLoop());
+    }
 
-        yield return null;
+    private IEnumerator RoundLoop()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(timeBetweenRounds);
+            Debug.Log($"Round {currentRound} starting!");
+
+            StartRound();
+
+            // Wait for either 30 seconds to pass or all enemies to be defeated
+            float roundTimer = 30f;
+            while (roundTimer > 0)
+            {
+                roundTimer -= Time.deltaTime;
+                yield return null;
+            }
+
+            Debug.Log($"Round {currentRound} ending!");
+            EndRound();
+        }
+    }
+
+
+
+    private void StartRound()
+    {
+        roundActive = true;
+        currentRound++;
+        OnRoundStart.Invoke();
+        EnemySpawner.Instance.StartRound();
+    }
+
+    private void EndRound()
+    {
+        roundActive = false;
+        OnRoundEnd.Invoke();
+        EnemySpawner.Instance.StopSpawning();
     }
 }

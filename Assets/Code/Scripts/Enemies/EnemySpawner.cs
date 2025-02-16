@@ -8,110 +8,110 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private EnemySerializable[] enemies; 
 
     [Header("Attributes")]
-    [SerializeField] private float enemiesPerSecond = 0.5f;
+    [SerializeField] private float baseEnemiesPerSecond = 0.5f;
     [SerializeField] private float timeBetweenWaves = 5f;
-    [SerializeField] private float difficultyScalingFactor = 0.75f;
+    [SerializeField] private float difficultyScalingFactor = 0.1f;
 
     [Header("Events")]
     public static UnityEvent onEnemyDestroy = new UnityEvent();
 
     private int currentWave = 1;
     private float timeSinceLastSpawn;
-    private int enemiesAlive;
-    private int enemiesLeftToSpawn;
     private bool isSpawning = false;
+    private bool roundActive = false;
     public static EnemySpawner Instance;
 
     private void Awake()
     {
-         if (Instance == null)
+        if (Instance == null)
             Instance = this;
         else
             Destroy(gameObject);
         onEnemyDestroy.AddListener(EnemyDestroyed);
+
+        // Subscribe to round end
+        if (RoundManager.Instance != null)
+        {
+            RoundManager.Instance.OnRoundEnd.AddListener(StopSpawning);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (RoundManager.Instance != null)
+        {
+            RoundManager.Instance.OnRoundEnd.AddListener(StopSpawning);
+        }
     }
 
     void Update()
     {
-        if (!isSpawning) return;
+        if (!isSpawning || !roundActive) return;
 
         timeSinceLastSpawn += Time.deltaTime;
 
-        if (timeSinceLastSpawn >= (1f / enemiesPerSecond) && enemiesLeftToSpawn > 0)
+        float adjustedSpawnRate = baseEnemiesPerSecond * (1 + (currentWave - 1) * difficultyScalingFactor);
+        if (timeSinceLastSpawn >= (1f / adjustedSpawnRate))
         {
             SpawnEnemy();
-            enemiesLeftToSpawn--;
-            enemiesAlive++;
             timeSinceLastSpawn = 0f;
-        }
-
-        if (enemiesAlive == 0 && enemiesLeftToSpawn == 0)
-        {
-            EndWave();
         }
     }
 
     private void EnemyDestroyed()
     {
-        enemiesAlive--;
+        // This function is no longer used to determine wave end
     }
 
-    public void InitiateWave(bool _start)
+    public void StartRound()
     {
-        if (_start)
-        {
-            StartCoroutine(StartWave());
-        }
+        roundActive = true;
+        StartCoroutine(StartWave());
     }
 
     private IEnumerator StartWave()
     {
         yield return new WaitForSeconds(timeBetweenWaves);
-        enemiesLeftToSpawn = EnemiesPerWave();
         isSpawning = true;
     }
 
-    public void EndWave()
+    public void StopSpawning()
     {
         isSpawning = false;
+        roundActive = false;
         timeSinceLastSpawn = 0f;
         currentWave++;
     }
 
-    private int EnemiesPerWave()
-    {
-        int totalEnemies = 0;
-        foreach (EnemySerializable enemy in enemies)
-        {
-            totalEnemies += Mathf.RoundToInt(enemy.spawnCount * Mathf.Pow(currentWave, difficultyScalingFactor));
-        }
-        Debug.Log("Calculated enemies for this wave: " + totalEnemies);
-        return totalEnemies;
-    }
-
     private void SpawnEnemy()
     {
-        if (enemies.Length == 0) return;
+        if (enemies.Length == 0 || !roundActive) return;
         GameObject prefabToSpawn = ChooseRandomEnemy();
         Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
     }
 
     private GameObject ChooseRandomEnemy()
     {
-        int totalSpawnWeight = 0;
+        if (enemies.Length == 0) return null;
+
+        float totalWeight = 0f;
         foreach (EnemySerializable enemy in enemies)
         {
-            totalSpawnWeight += enemy.spawnCount;
+            totalWeight += enemy.spawnCount; // spawnCount is now the probability weight
         }
 
-        int randomWeight = Random.Range(0, totalSpawnWeight);
+        float randomValue = Random.Range(0f, totalWeight);
+        float cumulativeWeight = 0f;
+
         foreach (EnemySerializable enemy in enemies)
         {
-            if (randomWeight < enemy.spawnCount)
+            cumulativeWeight += enemy.spawnCount;
+            if (randomValue <= cumulativeWeight)
+            {
                 return enemy.prefab;
-            randomWeight -= enemy.spawnCount;
+            }
         }
 
-        return enemies[0].prefab;
+        return enemies[0].prefab; // Fallback in case something goes wrong
     }
 }

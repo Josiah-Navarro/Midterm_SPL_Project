@@ -51,4 +51,9 @@ public class EnemyManager : MonoBehaviour
     {
         return enemies;
     }
+
+    public bool AreAllEnemiesDefeated()
+    {
+        return enemies.Count == 0;
+    }
 }

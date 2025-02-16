@@ -54,7 +54,7 @@ public class ENIACTower : BaseTower
         UpdateVisuals();
     }
 
-    protected override void Shoot()
+    public override void Shoot()
     {
         if (currentTarget == null || towerData.bulletPrefab == null || firingPoint == null) return;
         

@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0142481279c2fb74ba8cd1d002f733a2, type: 3}
   m_Name: AssemblyTowerData
   m_EditorClassIdentifier: 
+  icon: {fileID: -8070094175350719210, guid: eb2716e829843e042baad159ecb6e2fe, type: 3}
   towerName: AssemblyTower
-  rank: C
+  rarity: C
   attackRange: 3
   attackSpeed: 1
   damage: 10

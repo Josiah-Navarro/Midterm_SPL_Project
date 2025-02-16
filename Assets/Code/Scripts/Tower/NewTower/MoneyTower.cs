@@ -5,12 +5,12 @@ public class MoneyTower : BaseSupport
 
     protected override void ApplySupportEffect()
     {
-        RoundManager.Instance.OnRoundEnd += GenerateIncome;
+        RoundManager.Instance.OnRoundEnd.AddListener(GenerateIncome);
     }
 
     protected override void RemoveSupportEffect()
     {
-        RoundManager.Instance.OnRoundEnd -= GenerateIncome;
+        RoundManager.Instance.OnRoundEnd.RemoveListener(GenerateIncome);
     }
 
     private void GenerateIncome()

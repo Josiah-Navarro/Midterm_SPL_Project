@@ -14,7 +14,7 @@ public abstract class BaseTower : MonoBehaviour
     }
 
     [Header("Tower Data")]
-    [SerializeField] protected TowerData towerData;
+    [SerializeField] public TowerData towerData;
 
     [Header("References")]
     [SerializeField] protected Transform turretRotationPoint;
@@ -47,13 +47,14 @@ public abstract class BaseTower : MonoBehaviour
             timeUntilFire += Time.deltaTime;
             if (timeUntilFire >= 1f / towerData.attackSpeed)
             {
+                // Debug.Log("Shoot");
                 Shoot();
                 timeUntilFire = 0;
             }
         }
     }
 
-    protected virtual void Shoot()
+    public virtual void Shoot()
     {
         if (target == null) return;
         GameObject bullet = Instantiate(towerData.bulletPrefab, firingPoint.position, Quaternion.identity);

@@ -9,15 +9,16 @@ public class Enemy : MonoBehaviour
 
     [Header("Attributes")]
     [SerializeField] public string enemyName;
-    [SerializeField] private int hitpoints = 5;
+    [SerializeField] public int hitpoints = 5;
     [SerializeField] private int worth = 50;
     [SerializeField] private float originalSpeed = 2f;
 
     private float distanceToEnd;
-    private float moveSpeed;
+    public float moveSpeed;
     private float slowFactor = 1f;
     public bool isDestroyed = false;
     public bool isFrozen = false;
+    public bool isConverted = false;    
 
     private Transform target;
     private int pathIndex = 0;
@@ -159,4 +160,11 @@ public class Enemy : MonoBehaviour
     {
         moveSpeed = originalSpeed;
     }
+    public bool CanBeConverted => !isConverted && !isDestroyed;
+
+    public void DestroyMe()
+    {
+        Destroy(gameObject);
+    }
+
 }
