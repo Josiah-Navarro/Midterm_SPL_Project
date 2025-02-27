@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AlanTuringIcon_0: 3507745046214326360
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

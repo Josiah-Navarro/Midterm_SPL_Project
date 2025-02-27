@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      LegacyBanner_0: -7662787244227853690
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EniacIcon_0: 82603715764064623
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PioneerBanner_0: -8465836497263030070
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
