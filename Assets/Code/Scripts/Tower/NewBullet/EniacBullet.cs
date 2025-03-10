@@ -48,7 +48,8 @@ public class ENIACBullet : BaseBullet
         // Trigger explosion visual effect
         if (explosionEffectPrefab != null)
         {
-            Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
+            GameObject explosion = Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
+            Destroy(explosion, 1f);
         }
 
         Destroy(gameObject);

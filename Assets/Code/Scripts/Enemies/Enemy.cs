@@ -65,7 +65,6 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int dmg)
     {
         hitpoints -= dmg;
-        Debug.Log("Enemy Took "+ dmg);
         if (hitpoints <= 0 && !isDestroyed)
         {
             EnemySpawner.onEnemyDestroy.Invoke();

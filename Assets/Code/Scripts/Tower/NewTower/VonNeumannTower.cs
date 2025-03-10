@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class VonNeumannTower : BaseTower
 {
@@ -13,6 +14,7 @@ public class VonNeumannTower : BaseTower
     public float memoryPoolDuration = 5f;
     public float memoryStoredPercentage = 0.1f;
     private float memoryPool;
+    public LayerMask towerMask;
 
     [Header("Ultimate Ability")]
     public float replicationDuration = 5f;
@@ -76,22 +78,27 @@ public class VonNeumannTower : BaseTower
         currentAttackRange *= (1 + scalingFactor / 2);
 
     }   
+    private float memoryCount;
 
     private IEnumerator BuffNearbyTowers()
-    {
+    {   
         while (true)
         {
             nearbyTowers.Clear();
+            memoryPool = 0; // Reset memory pool at the start of each cycle
+
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, buffRadius);
             foreach (Collider2D col in colliders)
             {
                 BaseTower tower = col.GetComponent<BaseTower>();
                 if (tower != null && tower != this)
-                {
+                {                    
                     nearbyTowers.Add(tower);
                     memoryPool += tower.towerData.damage * memoryStoredPercentage;
+                    Debug.Log($"[VonNeumannTower] Found nearby tower: {tower.gameObject.name}, Memory Pool: {memoryPool}");
                 }
             }
+
             yield return new WaitForSeconds(memoryPoolDuration);
             ReleaseMemoryPool();
         }
@@ -99,13 +106,29 @@ public class VonNeumannTower : BaseTower
 
     private void ReleaseMemoryPool()
     {
+        if (nearbyTowers.Count > 0)
+        {
+            Debug.Log($"[VonNeumannTower] Buffing {nearbyTowers.Count} towers. Applying memory pool effect...");
+        }
+        else
+        {
+            Debug.Log("[VonNeumannTower] No towers to buff this cycle.");
+        }
+
         foreach (BaseTower tower in nearbyTowers)
         {
-            tower.towerData.attackSpeed *= 1.2f;
-            tower.towerData.attackRange *= 1.1f;
+            float newAttackSpeed = tower.GetAttackSpeed() * 1.1f;
+            float newAttackRange = tower.GetAttackRange() * 1.1f;
+
+            tower.SetAttackSpeed(newAttackSpeed);
+            tower.SetAttackRange(newAttackRange);
+
+            Debug.Log($"[VonNeumannTower] Buffed {tower.gameObject.name}: New Attack Speed = {newAttackSpeed}, New Attack Range = {newAttackRange}");
         }
+
         memoryPool = 0; // Reset memory pool after application
     }
+
 
     public void ActivateReplicationSurge()
     {
@@ -141,4 +164,15 @@ public class VonNeumannTower : BaseTower
         currentAttackSpeed = towerData.attackSpeed; // Reset to original attack speed
         currentAttackRange = towerData.attackRange; // Reset to original attack range
     }
+#if UNITY_EDITOR
+    protected override void OnDrawGizmosSelected()
+    {
+        if (towerData != null)
+        {
+            Handles.color = Color.green;
+            Handles.DrawWireDisc(transform.position, transform.forward, buffRadius);
+
+        }
+    }
+#endif
 }

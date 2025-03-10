@@ -17,6 +17,7 @@ public abstract class BaseTower : MonoBehaviour
     [SerializeField] public TowerData towerData;
 
     [Header("References")]
+    [SerializeField] protected Collider2D collider2D;
     [SerializeField] protected Transform turretRotationPoint;
     [SerializeField] protected LayerMask enemyMask;
     [SerializeField] protected Transform firingPoint;
@@ -24,6 +25,11 @@ public abstract class BaseTower : MonoBehaviour
     protected Transform target;
     protected float timeUntilFire;
     protected TargetingMode targetingMode = TargetingMode.First;
+    
+    private float originalAttackSpeed;
+    private float originalAttackRange;
+    private float attackRange;
+    private float attackSpeed;
 
     protected virtual void Start()
     {
@@ -32,6 +38,11 @@ public abstract class BaseTower : MonoBehaviour
             Debug.LogError($"{gameObject.name} is missing TowerData!");
             return;
         }
+        
+        originalAttackSpeed = towerData.attackSpeed;
+        originalAttackRange = towerData.attackRange;
+        attackRange = towerData.attackRange;
+        attackSpeed = towerData.attackSpeed;
     }
 
     protected virtual void Update()
@@ -45,7 +56,7 @@ public abstract class BaseTower : MonoBehaviour
         {
             RotateTowardsTarget();
             timeUntilFire += Time.deltaTime;
-            if (timeUntilFire >= 1f / towerData.attackSpeed)
+            if (timeUntilFire >= 1f / attackSpeed)
             {
                 // Debug.Log("Shoot");
                 Shoot();
@@ -72,7 +83,7 @@ public abstract class BaseTower : MonoBehaviour
 
     protected bool CheckTargetIsInRange()
     {
-        return target != null && Vector2.Distance(target.position, transform.position) <= towerData.attackRange;
+        return target != null && Vector2.Distance(target.position, transform.position) <= attackRange;
     }
 
     protected virtual void RotateTowardsTarget()
@@ -91,7 +102,7 @@ public abstract class BaseTower : MonoBehaviour
 
     protected virtual void FindTarget()
     {
-        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, towerData.attackRange, enemyMask);
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyMask);
         if (hits.Length == 0)
         {
             target = null;
@@ -131,6 +142,15 @@ public abstract class BaseTower : MonoBehaviour
         }
     }
 
+    public float GetAttackRange(){return attackRange;}
+    public float GetAttackSpeed(){return attackSpeed;}
+    public void SetAttackRange(float aR){attackRange = aR;}
+    public void SetAttackSpeed(float aS){attackSpeed = aS;}
+    public void Reset()
+    {
+        attackRange = originalAttackRange;
+        attackSpeed = originalAttackSpeed;
+    }
 #if UNITY_EDITOR
     protected virtual void OnDrawGizmosSelected()
     {
