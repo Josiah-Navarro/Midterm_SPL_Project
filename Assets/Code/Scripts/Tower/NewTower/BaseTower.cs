@@ -14,7 +14,14 @@ public abstract class BaseTower : MonoBehaviour
     }
 
     [Header("Tower Data")]
-    [SerializeField] public TowerData towerData;
+    public string towerName;
+    public float attackRange;
+    public float attackSpeed;
+    public int originalDamage;
+    public float rotationSpeed = 1000f;
+    
+    public GameObject bulletPrefab;
+    
 
     [Header("References")]
     [SerializeField] protected Collider2D collider2D;
@@ -26,23 +33,19 @@ public abstract class BaseTower : MonoBehaviour
     protected float timeUntilFire;
     protected TargetingMode targetingMode = TargetingMode.First;
     
-    private float originalAttackSpeed;
-    private float originalAttackRange;
-    private float attackRange;
-    private float attackSpeed;
+    private int upgradeLevel = 0;
+    private const int maxUpgradeLevel = 10; //Up to 300%
+    private const float upgradeMultiplier = 1.2f; 
+
+    protected float currentAttackRange;
+    protected float currentAttackSpeed;
+    public int damage;
 
     protected virtual void Start()
-    {
-        if (towerData == null)
-        {
-            Debug.LogError($"{gameObject.name} is missing TowerData!");
-            return;
-        }
-        
-        originalAttackSpeed = towerData.attackSpeed;
-        originalAttackRange = towerData.attackRange;
-        attackRange = towerData.attackRange;
-        attackSpeed = towerData.attackSpeed;
+    {   
+        currentAttackRange = attackRange;
+        currentAttackSpeed = attackSpeed;
+        damage = originalDamage;
     }
 
     protected virtual void Update()
@@ -56,9 +59,8 @@ public abstract class BaseTower : MonoBehaviour
         {
             RotateTowardsTarget();
             timeUntilFire += Time.deltaTime;
-            if (timeUntilFire >= 1f / attackSpeed)
+            if (timeUntilFire >= 1f / currentAttackSpeed)
             {
-                // Debug.Log("Shoot");
                 Shoot();
                 timeUntilFire = 0;
             }
@@ -68,41 +70,33 @@ public abstract class BaseTower : MonoBehaviour
     public virtual void Shoot()
     {
         if (target == null) return;
-        GameObject bullet = Instantiate(towerData.bulletPrefab, firingPoint.position, Quaternion.identity);
+        GameObject bullet = Instantiate(bulletPrefab, target.position, firingPoint.rotation);
         BaseBullet bulletScript = bullet.GetComponent<BaseBullet>();
-
-        if (bulletScript != null)
-        {
-            bulletScript.Initialize(target, towerData.damage);
-        }
-        else
-        {
-            Debug.LogError("Bullet prefab is missing BaseBullet component!");
-        }
+        bulletScript.Initialize(target, damage);
     }
 
     protected bool CheckTargetIsInRange()
     {
-        return target != null && Vector2.Distance(target.position, transform.position) <= attackRange;
+        return target != null && Vector2.Distance(target.position, transform.position) <= currentAttackRange;
     }
 
     protected virtual void RotateTowardsTarget()
     {
         if (target == null) return;
 
-        float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg;
+        float angle = (Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg);
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
 
         turretRotationPoint.rotation = Quaternion.RotateTowards(
             turretRotationPoint.rotation,
             targetRotation,
-            towerData.rotationSpeed * Time.deltaTime
+            rotationSpeed * Time.deltaTime
         );
     }
 
     protected virtual void FindTarget()
     {
-        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyMask);
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, currentAttackRange, enemyMask);
         if (hits.Length == 0)
         {
             target = null;
@@ -142,23 +136,66 @@ public abstract class BaseTower : MonoBehaviour
         }
     }
 
-    public float GetAttackRange(){return attackRange;}
-    public float GetAttackSpeed(){return attackSpeed;}
-    public void SetAttackRange(float aR){attackRange = aR;}
-    public void SetAttackSpeed(float aS){attackSpeed = aS;}
+    public float GetAttackRange(){return currentAttackRange;}
+    public float GetAttackSpeed(){return currentAttackSpeed;}
+    public void SetAttackRange(float aR){currentAttackRange = aR;}
+    public void SetAttackSpeed(float aS){currentAttackSpeed = aS;}
     public void Reset()
     {
-        attackRange = originalAttackRange;
-        attackSpeed = originalAttackSpeed;
+        if (upgradeLevel == 1) 
+        {
+            // Reset to base stats if it's level 1 (no upgrades applied)
+            currentAttackRange = attackRange;
+            currentAttackSpeed = attackSpeed;
+            damage = originalDamage;
+        }
+        else
+        {
+            // Apply upgrade multiplier if it's beyond level 1
+            currentAttackRange = attackRange * Mathf.Pow(upgradeMultiplier, upgradeLevel - 1);
+            currentAttackSpeed = attackSpeed * Mathf.Pow(upgradeMultiplier, upgradeLevel - 1);
+            damage = Mathf.RoundToInt(originalDamage * Mathf.Pow(upgradeMultiplier, upgradeLevel - 1));
+        }
+
+        Debug.Log($"Tower reset! Current upgrade level: {upgradeLevel}. Stats restored.");
     }
+
+
+    public bool UpgradeTower()
+    {
+        if (upgradeLevel >= maxUpgradeLevel)
+        {
+            Debug.Log("Tower is already at max upgrade level!");
+            return false;
+        }
+
+        int towerCount = TowerInventory.Instance.GetTowerCount(towerName); // Get duplicates in inventory
+        if (towerCount <= 0)
+        {
+            Debug.Log("No duplicate towers in inventory for upgrade!");
+            return false;
+        }
+
+        // Remove one duplicate from inventory as cost
+        TowerInventory.Instance.RemoveTowerFromUI(towerName);
+
+        // Upgrade Stats
+        upgradeLevel++;
+        currentAttackRange = attackRange * Mathf.Pow(upgradeMultiplier, upgradeLevel);
+        currentAttackSpeed = attackSpeed * Mathf.Pow(upgradeMultiplier, upgradeLevel);
+        damage = Mathf.RoundToInt(originalDamage * Mathf.Pow(upgradeMultiplier, upgradeLevel));
+
+        Debug.Log($"Tower upgraded to level {upgradeLevel}! Stats increased by {upgradeMultiplier * 100 - 100}%");
+        return true;
+    }
+
+    public int GetUpgradeLevel() => upgradeLevel;
+
 #if UNITY_EDITOR
     protected virtual void OnDrawGizmosSelected()
     {
-        if (towerData != null)
-        {
-            Handles.color = Color.cyan;
-            Handles.DrawWireDisc(transform.position, transform.forward, towerData.attackRange);
-        }
+        Handles.color = Color.cyan;
+        Handles.DrawWireDisc(transform.position, transform.forward, currentAttackRange);
     }
 #endif
 }

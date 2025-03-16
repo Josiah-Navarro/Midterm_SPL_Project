@@ -12,12 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0142481279c2fb74ba8cd1d002f733a2, type: 3}
   m_Name: ENIACTowerData
   m_EditorClassIdentifier: 
-  icon: {fileID: 82603715764064623, guid: a8e87ab90e26e374b9b89c9dd6a8ded7, type: 3}
+  towerID: 5
   towerName: ENIAC Tower
+  towerPrefab: {fileID: 5135398175848266765, guid: ab925aabbaab63b4d84b240ca08f8001, type: 3}
   rarity: S
-  attackRange: 8
-  attackSpeed: 1
-  damage: 10
-  cost: 500
-  rotationSpeed: 1000
-  bulletPrefab: {fileID: 1598321897876606456, guid: 40031d59fc2511d4f8f4f5ef3fb1cfb0, type: 3}
+  cost: 0
+  isWaterTower: 0

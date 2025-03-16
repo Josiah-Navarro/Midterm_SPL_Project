@@ -4,12 +4,12 @@ public class BasicTower : BaseTower
 {
     public override void Shoot()
     {
-        GameObject bullet = Instantiate(towerData.bulletPrefab, firingPoint.position, Quaternion.identity);
+        GameObject bullet = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
         BaseBullet bulletScript = bullet.GetComponent<BaseBullet>();
 
         if (bulletScript != null)
         {
-            bulletScript.Initialize(target, towerData.damage); 
+            bulletScript.Initialize(target, damage); 
         }
     }
 

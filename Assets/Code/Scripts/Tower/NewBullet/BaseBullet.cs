@@ -16,9 +16,10 @@ public abstract class BaseBullet : MonoBehaviour
     {
         Destroy(gameObject, bulletLifetime);
     }
+
     protected virtual void Update()
     {
-        if(target == null)
+        if (target == null)
         {
             Destroy(gameObject);
         }

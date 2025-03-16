@@ -12,12 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0142481279c2fb74ba8cd1d002f733a2, type: 3}
   m_Name: AlanTuringTowerData
   m_EditorClassIdentifier: 
-  icon: {fileID: 3507745046214326360, guid: 1cf3971ff30f0e943b7b44153924265a, type: 3}
+  towerID: 4
   towerName: Alan Turing Tower
+  towerPrefab: {fileID: 5135398175848266765, guid: e5b643df26aadbb47b5a9d7ee1d8b857, type: 3}
   rarity: U
-  attackRange: 3
-  attackSpeed: 0
-  damage: 10
-  cost: 50
-  rotationSpeed: 1000
-  bulletPrefab: {fileID: 7342037630946578433, guid: 356beaef94a00384dab35dc261971738, type: 3}
+  cost: 0
+  isWaterTower: 0

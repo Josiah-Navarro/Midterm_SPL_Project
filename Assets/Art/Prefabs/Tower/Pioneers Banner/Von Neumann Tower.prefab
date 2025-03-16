@@ -190,13 +190,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1ae0f9e471a2d244b7718bf6653d884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerData: {fileID: 11400000, guid: ca5207bd33e9bf54784103497012a55a, type: 2}
+  towerName: Von Neumann Tower
+  attackRange: 5
+  attackSpeed: 1
+  originalDamage: 3
+  rotationSpeed: 1000
+  bulletPrefab: {fileID: 7862029619940082516, guid: 30641ed49c34bbc4ab1a0149f92b6c79, type: 3}
   collider2D: {fileID: 2181331355625544426}
   turretRotationPoint: {fileID: 2234737151534793583}
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
   firingPoint: {fileID: 7173730418355606264}
+  damage: 3
   scalingFactor: 0.05
   storedProgramBlastPrefab: {fileID: 7862029619940082516, guid: 30641ed49c34bbc4ab1a0149f92b6c79, type: 3}
   buffRadius: 3

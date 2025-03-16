@@ -190,13 +190,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84aa0ae0c228e8c43a6e674443591e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerData: {fileID: 11400000, guid: d70e81c08a5a6e2469477587886a0546, type: 2}
+  towerName: Assembly Tower
+  attackRange: 3
+  attackSpeed: 1
+  originalDamage: 5
+  rotationSpeed: 1000
+  bulletPrefab: {fileID: 7342037630946578433, guid: dda6b0bdbaac0b949b98fc8eb5caedc3, type: 3}
   collider2D: {fileID: -4850690904493760117}
   turretRotationPoint: {fileID: 2234737151534793583}
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
   firingPoint: {fileID: 7173730418355606264}
+  damage: 5
 --- !u!61 &-4850690904493760117
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -12,12 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0142481279c2fb74ba8cd1d002f733a2, type: 3}
   m_Name: FORTRANTowerData
   m_EditorClassIdentifier: 
-  icon: {fileID: -4803533290026290037, guid: 3e7857b79e76d7840807ee0f079bc031, type: 3}
-  towerName: FORTRAN Towr
+  towerID: 2
+  towerName: FORTRAN Tower
+  towerPrefab: {fileID: 5135398175848266765, guid: c7ee0d6222c08c2479cd2dcc5731861f, type: 3}
   rarity: R
-  attackRange: 10
-  attackSpeed: 0.5
-  damage: 50
-  cost: 50
-  rotationSpeed: 1000
-  bulletPrefab: {fileID: 7342037630946578433, guid: efb991e94c98fe542aa7900626ea39b1, type: 3}
+  cost: 0
+  isWaterTower: 0

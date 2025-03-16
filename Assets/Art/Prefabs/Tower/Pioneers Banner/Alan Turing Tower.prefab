@@ -157,16 +157,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89f6b1540c586154eb282f8727ad4c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerData: {fileID: 11400000, guid: 3fc1fcaf019a9f2469039076a0d23318, type: 2}
+  towerName: Alan Turing Tower
+  attackRange: 3
+  attackSpeed: 2
+  originalDamage: 2
+  rotationSpeed: 1000
+  bulletPrefab: {fileID: 7342037630946578433, guid: 356beaef94a00384dab35dc261971738, type: 3}
   collider2D: {fileID: 7248314611366101866}
   turretRotationPoint: {fileID: 7328741373106442524}
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
   firingPoint: {fileID: 1594518717203962253}
+  damage: 2
   waveInterval: 2
   waveRadius: 3
-  waveTimer: 0
+  waveTimer: 1
 --- !u!61 &7248314611366101866
 BoxCollider2D:
   m_ObjectHideFlags: 0

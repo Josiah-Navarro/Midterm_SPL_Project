@@ -23,7 +23,6 @@ public class Enemy : MonoBehaviour
     private Transform target;
     private int pathIndex = 0;
 
-    private List<EchoBubble> attachedBubbles = new List<EchoBubble>();
 
     void Start()
     {
@@ -122,23 +121,6 @@ public class Enemy : MonoBehaviour
         slowFactor = 1f;
     }
 
-    public void AddBubble(EchoBubble bubble)
-    {
-        attachedBubbles.Add(bubble);
-    }
-
-    public void RemoveBubble(EchoBubble bubble)
-    {
-        attachedBubbles.Remove(bubble);
-    }
-
-    private void OnDestroy()
-    {
-        foreach (var bubble in attachedBubbles)
-        {
-            Destroy(bubble.gameObject);
-        }
-    }
 
     public float GetMoveSpeed()
     {

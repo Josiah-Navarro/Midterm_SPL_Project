@@ -46,9 +46,13 @@ public class Plot : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (tower != null) return;
+        if (tower != null) {
+            Debug.LogWarning("Cannot Be Placed Here");
+            TowerUIManager.Instance.ShowTowerUI(tower.transform);
+            return;
+        }
 
-        Tower towerToBuild = BuildManager.main.GetSelectedTower();
+        TowerData towerToBuild = BuildManager.Instance.GetSelectedTower(); 
         if (towerToBuild == null)
         {
             Debug.LogWarning("No tower selected!");
@@ -67,7 +71,19 @@ public class Plot : MonoBehaviour
             return;
         }
 
+        TowerInventory.TowerEntry entry = TowerInventory.Instance.inventory.Find(t => t.towerID == towerToBuild.towerID);
+        if (entry == null || entry.count <= 0)
+        {
+            Debug.Log("No towers left in inventory!");
+            return;
+        }
+
+        // Place the tower
         LevelManager.main.SpendCurrency(towerToBuild.cost);
-        tower = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
+        tower = Instantiate(towerToBuild.towerPrefab, transform.position, Quaternion.identity); 
+
+        // Remove tower from inventory
+        TowerInventory.Instance.RemoveTowerFromUI(towerToBuild.towerName);
     }
+
 }

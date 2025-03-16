@@ -48,7 +48,8 @@ public class SummonManager : MonoBehaviour
             TowerData pulledTower = selectedBanner.GetRandomTower();
             pulledTowers.Add(pulledTower);
         }
-
+        
+        TowerInventory.Instance.AddSummonedTowers(pulledTowers);
         DisplaySummonResults(pulledTowers);
     }
 

@@ -22,14 +22,14 @@ public class VonNeumannTower : BaseTower
 
     private List<BaseTower> nearbyTowers = new List<BaseTower>();
 
-    private float currentAttackSpeed;
-    private float currentAttackRange;
+    private float CAS;
+    private float CAR;
 
     protected override void Start()
     {
         base.Start();
-        currentAttackSpeed = towerData.attackSpeed; // Store initial attack speed without modifying towerData
-        currentAttackRange = towerData.attackRange; // Store initial attack range
+        CAS = attackSpeed; // Store initial attack speed without modifying towerData
+        CAR = attackRange; // Store initial attack range
 
         StartCoroutine(BuffNearbyTowers());
 
@@ -50,7 +50,7 @@ public class VonNeumannTower : BaseTower
         {
             RotateTowardsTarget();
             timeUntilFire += Time.deltaTime;
-            if (timeUntilFire >= 1f / currentAttackSpeed)
+            if (timeUntilFire >= 1f / CAS)
             {
                 Shoot();
                 timeUntilFire = 0;
@@ -71,11 +71,10 @@ public class VonNeumannTower : BaseTower
         if (target == null) return;
         GameObject blast = Instantiate(storedProgramBlastPrefab, firingPoint.position, Quaternion.identity);
         StoredProgramBlast spb = blast.GetComponent<StoredProgramBlast>();
-        spb.Initialize(target, towerData.damage);
+        spb.Initialize(target, damage);
 
-        // Apply Scaling Without Modifying TowerData
-        currentAttackSpeed *= (1 + scalingFactor);
-        currentAttackRange *= (1 + scalingFactor / 2);
+        CAS *= (1 + scalingFactor);
+        CAR *= (1 + scalingFactor / 2);
 
     }   
     private float memoryCount;
@@ -94,8 +93,7 @@ public class VonNeumannTower : BaseTower
                 if (tower != null && tower != this)
                 {                    
                     nearbyTowers.Add(tower);
-                    memoryPool += tower.towerData.damage * memoryStoredPercentage;
-                    Debug.Log($"[VonNeumannTower] Found nearby tower: {tower.gameObject.name}, Memory Pool: {memoryPool}");
+                    memoryPool += tower.damage * memoryStoredPercentage;
                 }
             }
 
@@ -106,14 +104,6 @@ public class VonNeumannTower : BaseTower
 
     private void ReleaseMemoryPool()
     {
-        if (nearbyTowers.Count > 0)
-        {
-            Debug.Log($"[VonNeumannTower] Buffing {nearbyTowers.Count} towers. Applying memory pool effect...");
-        }
-        else
-        {
-            Debug.Log("[VonNeumannTower] No towers to buff this cycle.");
-        }
 
         foreach (BaseTower tower in nearbyTowers)
         {
@@ -126,9 +116,8 @@ public class VonNeumannTower : BaseTower
             Debug.Log($"[VonNeumannTower] Buffed {tower.gameObject.name}: New Attack Speed = {newAttackSpeed}, New Attack Range = {newAttackRange}");
         }
 
-        memoryPool = 0; // Reset memory pool after application
+        memoryPool = 0;
     }
-
 
     public void ActivateReplicationSurge()
     {
@@ -153,26 +142,21 @@ public class VonNeumannTower : BaseTower
     {
         while (isReplicating)
         {
-            yield return new WaitForSeconds(tower.towerData.attackSpeed);
-            tower.Shoot(); // Simulating an extra attack
+            yield return new WaitForSeconds(tower.attackSpeed);
+            tower.Shoot(); 
         }
     }
 
     private void ResetScaling()
     {
-        Debug.Log("ResetScaling called for VonNeumannTower!");
-        currentAttackSpeed = towerData.attackSpeed; // Reset to original attack speed
-        currentAttackRange = towerData.attackRange; // Reset to original attack range
+        CAS = attackSpeed; // Reset to original attack speed
+        CAR = attackRange; // Reset to original attack range
     }
 #if UNITY_EDITOR
     protected override void OnDrawGizmosSelected()
     {
-        if (towerData != null)
-        {
-            Handles.color = Color.green;
-            Handles.DrawWireDisc(transform.position, transform.forward, buffRadius);
-
-        }
+        Handles.color = Color.green;
+        Handles.DrawWireDisc(transform.position, transform.forward, buffRadius);
     }
 #endif
 }

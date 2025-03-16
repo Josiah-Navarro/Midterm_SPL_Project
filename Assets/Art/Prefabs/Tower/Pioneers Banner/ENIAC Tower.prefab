@@ -236,17 +236,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0e62f4f309306f409c275118abb555b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerData: {fileID: 11400000, guid: 01ba7ad046a1b844ea358ce07cec44fe, type: 2}
+  towerName: ENIAC Tower
+  attackRange: 10
+  attackSpeed: 2.5
+  originalDamage: 10
+  rotationSpeed: 1000
+  bulletPrefab: {fileID: 1598321897876606456, guid: 40031d59fc2511d4f8f4f5ef3fb1cfb0, type: 3}
   collider2D: {fileID: 5138677451571403568}
   turretRotationPoint: {fileID: 2234737151534793583}
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
   firingPoint: {fileID: 7173730418355606264}
+  damage: 10
   chargeTime: 3
   damageMultiplier: 10
   aoeRatio: 0.25
-  towerRenderer: {fileID: 7454737384389542899}
 --- !u!61 &5138677451571403568
 BoxCollider2D:
   m_ObjectHideFlags: 0

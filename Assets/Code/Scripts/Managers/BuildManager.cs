@@ -1,33 +1,58 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class BuildManager : MonoBehaviour
 {
-    public static BuildManager main;
-    [Header("References")]
-    [SerializeField] private Tower[] towers;
+    public static BuildManager Instance { get; private set; }
 
-    private int selectedTower = 0;
+    [Header("References")]
+    [SerializeField] private TowerData[] towerDataList;
+    private Dictionary<int, TowerData> towerDictionary = new Dictionary<int, TowerData>();
+    private int selectedTowerID = -1;
+
     private void Awake()
     {
-        main = this;
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Debug.LogWarning("Multiple BuildManager instances found! Destroying extra instance.");
+            Destroy(gameObject);
+            return;
+        }
+        foreach (TowerData tower in towerDataList)
+        {
+            if (!towerDictionary.ContainsKey(tower.towerID))
+            {
+                towerDictionary.Add(tower.towerID, tower);
+            }
+            else
+            {
+                Debug.LogWarning($"Duplicate Tower ID found: {tower.towerID} for {tower.towerName}");
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public TowerData GetSelectedTower()
     {
-        
+        if (selectedTowerID > -1 && towerDictionary.ContainsKey(selectedTowerID))
+        {
+            return towerDictionary[selectedTowerID];
+        }
+        return null;
     }
-    public Tower GetSelectedTower()
+
+    public void SetSelectedTower(int id)
     {
-        return towers[selectedTower];
-    }
-    public void SetSelectedTower(int _selectedTower)
-    {
-        selectedTower = _selectedTower;
+        if (towerDictionary.ContainsKey(id))
+        {
+            selectedTowerID = id;
+        }
+        else
+        {
+            Debug.LogError($"Tower with ID {id} not found!");
+        }
     }
 }

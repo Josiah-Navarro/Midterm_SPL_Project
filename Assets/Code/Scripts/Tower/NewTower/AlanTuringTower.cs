@@ -22,7 +22,7 @@ public class AlanTuringTower : BaseTower
 
     void EmitDecipheringWave()
     {
-        GameObject wave = Instantiate(towerData.bulletPrefab, firingPoint.position, Quaternion.identity);
+        GameObject wave = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
         AlanTuringWave turingWaveScript = wave.GetComponent<AlanTuringWave>();
         turingWaveScript.SetProperties(waveRadius, enemyMask);
     }
