@@ -193,7 +193,7 @@ MonoBehaviour:
   towerName: Machine Code Tower
   attackRange: 2
   attackSpeed: 3
-  originalDamage: 1
+  originalDamage: 3
   rotationSpeed: 1000
   bulletPrefab: {fileID: 7342037630946578433, guid: dda6b0bdbaac0b949b98fc8eb5caedc3, type: 3}
   collider2D: {fileID: 1860752405312902226}

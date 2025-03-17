@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c1b413d3d3c3d6d4c89f1029c59e2592, type: 3}
-  m_Color: {r: 0.24110003, g: 0.35837576, b: 0.3962264, a: 1}
+  m_Color: {r: 0.30204362, g: 0.23921569, b: 0.39607844, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 219460995789014918}
   - component: {fileID: -4850690904493760117}
   m_Layer: 9
-  m_Name: Assembly
+  m_Name: BASIC Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -190,10 +190,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84aa0ae0c228e8c43a6e674443591e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerName: Assembly Tower
-  attackRange: 3
-  attackSpeed: 1
-  originalDamage: 6
+  towerName: BASIC Tower
+  attackRange: 5
+  attackSpeed: 2
+  originalDamage: 3
   rotationSpeed: 1000
   bulletPrefab: {fileID: 7342037630946578433, guid: dda6b0bdbaac0b949b98fc8eb5caedc3, type: 3}
   collider2D: {fileID: -4850690904493760117}
@@ -202,7 +202,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   firingPoint: {fileID: 7173730418355606264}
-  damage: 5
+  damage: 0
 --- !u!61 &-4850690904493760117
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -357,7 +357,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: b94e31296c8549b458b49b125d6d0f54, type: 3}
-  m_Color: {r: 0.5424528, g: 1, b: 0.8775942, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

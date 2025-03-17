@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEditor;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -159,6 +160,25 @@ public abstract class BaseTower : MonoBehaviour
 
         Debug.Log($"Tower reset! Current upgrade level: {upgradeLevel}. Stats restored.");
     }
+    public virtual void ApplySlow(float factor, float duration)
+    {
+        Debug.Log($"[ApplySlow] Applying slow effect: Factor = {factor}, Duration = {duration} seconds");
+        StartCoroutine(SlowEffect(factor, duration));
+    }
+
+    private IEnumerator SlowEffect(float factor, float duration)
+    {
+        float speed = currentAttackSpeed;
+        currentAttackSpeed *= factor;
+
+        Debug.Log($"[SlowEffect] Tower slowed! New Attack Speed: {currentAttackSpeed}");
+
+        yield return new WaitForSeconds(duration);
+
+        Reset();
+        Debug.Log($"[SlowEffect] Slow effect ended. Attack Speed restored to: {currentAttackSpeed}");
+    }
+
 
 
     public bool UpgradeTower()
@@ -190,6 +210,18 @@ public abstract class BaseTower : MonoBehaviour
     }
 
     public int GetUpgradeLevel() => upgradeLevel;
+    public void RandomizeTargetingMode()
+    {
+        TargetingMode[] modes = (TargetingMode[])System.Enum.GetValues(typeof(TargetingMode));
+        targetingMode = modes[Random.Range(0, modes.Length)];
+        Debug.Log($"[BaseTower] {towerName} now targeting: {targetingMode}");
+    }
+    public void ResetTargetingMode()
+    {
+        targetingMode = TargetingMode.First;
+        Debug.Log($"[BaseTower] {towerName} reset to First targeting mode.");
+    }
+
 
 #if UNITY_EDITOR
     protected virtual void OnDrawGizmosSelected()

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0142481279c2fb74ba8cd1d002f733a2, type: 3}
+  m_Name: BASICTower
+  m_EditorClassIdentifier: 
+  towerID: 7
+  towerName: BASIC Tower
+  towerPrefab: {fileID: 5135398175848266765, guid: 5e4d6ee5a6ee1ce4d99368d1f235548e, type: 3}
+  rarity: C
+  cost: 50
+  isWaterTower: 0

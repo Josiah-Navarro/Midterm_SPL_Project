@@ -1122,6 +1122,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315013740}
   m_CullTransparentMesh: 1
+--- !u!1001 &359796770
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 867459926807839691, guid: 6110c4e4197ef7c41af74fea76b518d6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -27.12204
+      objectReference: {fileID: 0}
+    - target: {fileID: 867459926807839691, guid: 6110c4e4197ef7c41af74fea76b518d6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.4449131
+      objectReference: {fileID: 0}
+    - target: {fileID: 867459926807839691, guid: 6110c4e4197ef7c41af74fea76b518d6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 867459926807839691, guid: 6110c4e4197ef7c41af74fea76b518d6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 867459926807839691, guid: 6110c4e4197ef7c41af74fea76b518d6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 867459926807839691, guid: 6110c4e4197ef7c41af74fea76b518d6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 867459926807839691, guid: 6110c4e4197ef7c41af74fea76b518d6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 867459926807839691, guid: 6110c4e4197ef7c41af74fea76b518d6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 867459926807839691, guid: 6110c4e4197ef7c41af74fea76b518d6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 867459926807839691, guid: 6110c4e4197ef7c41af74fea76b518d6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3133767271461436333, guid: 6110c4e4197ef7c41af74fea76b518d6, type: 3}
+      propertyPath: m_Name
+      value: Female MC
+      objectReference: {fileID: 0}
+    - target: {fileID: 6520166114240297272, guid: 6110c4e4197ef7c41af74fea76b518d6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6110c4e4197ef7c41af74fea76b518d6, type: 3}
 --- !u!1 &394071438
 GameObject:
   m_ObjectHideFlags: 0
@@ -3075,7 +3136,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bannerDisplay: {fileID: 119257372}
-  banners: []
+  banners:
+  - {fileID: -8465836497263030070, guid: 30f2fd688f238384b864bd122a3ea376, type: 3}
+  - {fileID: -7662787244227853690, guid: 8c5f167ff18212940999ad7e9415c37d, type: 3}
   leftButton: {fileID: 1181749625}
   rightButton: {fileID: 512097470}
   slideSpeed: 5
@@ -4803,12 +4866,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - name: Normal Enemy
+  - name: Punch Card Phantom
     spawnCount: 10
-    prefab: {fileID: 996180211710454622, guid: 83d78b31403afb9438fb82ba814371e5, type: 3}
-  - name: Tanky Enemy
-    spawnCount: 1
-    prefab: {fileID: 996180211710454622, guid: a97cd163d82171e4fb7c5ed7628d549c, type: 3}
+    prefab: {fileID: 996180211710454622, guid: b9a657bbe24159042af0d7ad02e4f471, type: 3}
+  - name: Byte Bug
+    spawnCount: 15
+    prefab: {fileID: 996180211710454622, guid: d11481a0d16f4734fb1617bacf3e0718, type: 3}
+  - name: Syntax Crawlers
+    spawnCount: 10
+    prefab: {fileID: 996180211710454622, guid: a770ecf981e261e43b221a11a8b67640, type: 3}
+  - name: Null Pointer Beetle
+    spawnCount: 5
+    prefab: {fileID: 996180211710454622, guid: e0b2e86f2e7b38d449849aa63ab50326, type: 3}
+  - name: Buffer Overflow Wraith
+    spawnCount: 10
+    prefab: {fileID: 996180211710454622, guid: 4181fc04f09369044b749e0dd572a55d, type: 3}
+  - name: Core Dump Golem
+    spawnCount: 5
+    prefab: {fileID: 996180211710454622, guid: 223395200c557de46ad26eb4abff3993, type: 3}
+  - name: Race Condition Phantom
+    spawnCount: 10
+    prefab: {fileID: 996180211710454622, guid: b97d0c3ad42d9d944bc9e554cf9c511f, type: 3}
   baseEnemiesPerSecond: 0.5
   timeBetweenWaves: 1
   difficultyScalingFactor: 0.75
@@ -5892,3 +5970,4 @@ SceneRoots:
   - {fileID: 513718541}
   - {fileID: 891698695}
   - {fileID: 1711162018}
+  - {fileID: 359796770}

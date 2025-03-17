@@ -5,32 +5,34 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] public Rigidbody2D rb;
 
     [Header("Attributes")]
     [SerializeField] public string enemyName;
     [SerializeField] public int hitpoints = 5;
-    [SerializeField] private int worth = 50;
+    [SerializeField] public int worth = 50;
     [SerializeField] private float originalSpeed = 2f;
+    [SerializeField] public bool isConverted = false;    
 
+    public int originalHitpoints;
     private float distanceToEnd;
     public float moveSpeed;
-    private float slowFactor = 1f;
+    public float slowFactor = 1f;
     public bool isDestroyed = false;
     public bool isFrozen = false;
-    public bool isConverted = false;    
 
-    private Transform target;
-    private int pathIndex = 0;
+    public Transform target;
+    public int pathIndex = 0;
 
 
-    void Start()
+    public void Start()
     {
+        originalHitpoints = hitpoints;
         moveSpeed = originalSpeed;
         target = LevelManager.main.path[pathIndex];
     }
 
-    void Update()
+    public void Update()
     {
         if (Vector2.Distance(target.position, transform.position) <= 0.1f)
         {
@@ -61,7 +63,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int dmg)
+    public virtual void TakeDamage(int dmg)
     {
         hitpoints -= dmg;
         if (hitpoints <= 0 && !isDestroyed)
