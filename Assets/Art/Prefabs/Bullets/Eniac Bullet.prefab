@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2100220271222339089}
   - component: {fileID: 810154303537757435}
   - component: {fileID: 4615737355548864368}
-  - component: {fileID: 7184144604243717379}
+  - component: {fileID: 6332406671400307182}
   m_Layer: 7
   m_Name: Eniac Bullet
   m_TagString: Untagged
@@ -153,7 +153,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &7184144604243717379
+--- !u!114 &6332406671400307182
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1598321897876606456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e194034248d231e4eb9c339425ac2866, type: 3}
+  m_Script: {fileID: 11500000, guid: fe2eb8933585668448bdecc0eeb4ed05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4615737355548864368}
@@ -173,7 +173,7 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
-  spriteRenderer: {fileID: 2100220271222339089}
+  spriteRenderer: {fileID: 0}
   baseColor: {r: 0, g: 0, b: 1, a: 1}
   chargedColor: {r: 0, g: 1, b: 1, a: 1}
   explosionEffectPrefab: {fileID: 2705530676022568594, guid: 89185dc2c5d978d44af94add8e34d0ea, type: 3}

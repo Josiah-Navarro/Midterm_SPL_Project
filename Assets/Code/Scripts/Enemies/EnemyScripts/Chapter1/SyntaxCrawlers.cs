@@ -6,9 +6,8 @@ public class SyntaxCrawler : Enemy
     [SerializeField] private float healthMultiplier = 1.5f; 
     [SerializeField] private float speedMultiplier = 1.2f; 
 
-    new void Start()
+    void Start()
     {
-        base.Start();
         hitpoints = Mathf.RoundToInt(hitpoints * healthMultiplier); 
         moveSpeed *= speedMultiplier;
     }

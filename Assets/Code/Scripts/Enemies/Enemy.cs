@@ -12,33 +12,42 @@ public class Enemy : MonoBehaviour
     [SerializeField] public int hitpoints = 5;
     [SerializeField] public int worth = 50;
     [SerializeField] private float originalSpeed = 2f;
-    [SerializeField] public bool isConverted = false;    
+    [SerializeField] public bool isConverted = false;
 
-    public int originalHitpoints;
-    private float distanceToEnd;
+    public int pathIndex = 0;
+    public List<Transform> path;
+    public Transform target;
+    
     public float moveSpeed;
     public float slowFactor = 1f;
     public bool isDestroyed = false;
     public bool isFrozen = false;
+    public int originalHitpoints;
 
-    public Transform target;
-    public int pathIndex = 0;
-
-
-    public void Start()
+    public void Initialize(int pathID)
     {
+        path = LevelManager.main.GetPath(pathID); // Assigns path based on spawn
+        if (path == null || path.Count == 0)
+        {
+            Debug.LogError($"Enemy '{enemyName}' has no valid path!");
+            Destroy(gameObject);
+            return;
+        }
+
         originalHitpoints = hitpoints;
         moveSpeed = originalSpeed;
-        target = LevelManager.main.path[pathIndex];
+        target = path[pathIndex]; // Start at first point
     }
 
     public void Update()
     {
+        if (target == null) return;
+
         if (Vector2.Distance(target.position, transform.position) <= 0.1f)
         {
             pathIndex++;
 
-            if (pathIndex >= LevelManager.main.path.Length)
+            if (pathIndex >= path.Count)
             {
                 LevelManager.main.TakeDamage(hitpoints);
                 EnemySpawner.onEnemyDestroy.Invoke();
@@ -46,7 +55,7 @@ public class Enemy : MonoBehaviour
                 return;
             }
 
-            target = LevelManager.main.path[pathIndex];
+            target = path[pathIndex];
         }
     }
 
@@ -83,21 +92,20 @@ public class Enemy : MonoBehaviour
         moveSpeed = 0;
         StartCoroutine(UnfreezeAfter(duration));
     }
-    
+
     public float GetDistanceToEnd()
     {
-        if (pathIndex >= LevelManager.main.path.Length) return 0f; // Already at the end
+        if (pathIndex >= path.Count) return 0f;
 
-        float distance = Vector3.Distance(transform.position, LevelManager.main.path[pathIndex].position);
+        float distance = Vector3.Distance(transform.position, path[pathIndex].position);
 
-        for (int i = pathIndex; i < LevelManager.main.path.Length - 1; i++)
+        for (int i = pathIndex; i < path.Count - 1; i++)
         {
-            distance += Vector3.Distance(LevelManager.main.path[i].position, LevelManager.main.path[i + 1].position);
+            distance += Vector3.Distance(path[i].position, path[i + 1].position);
         }
 
         return distance;
     }
-
 
     private IEnumerator UnfreezeAfter(float duration)
     {
@@ -123,7 +131,6 @@ public class Enemy : MonoBehaviour
         slowFactor = 1f;
     }
 
-
     public float GetMoveSpeed()
     {
         return moveSpeed;
@@ -143,11 +150,11 @@ public class Enemy : MonoBehaviour
     {
         moveSpeed = originalSpeed;
     }
+
     public bool CanBeConverted => !isConverted && !isDestroyed;
 
     public void DestroyMe()
     {
         Destroy(gameObject);
     }
-
 }
