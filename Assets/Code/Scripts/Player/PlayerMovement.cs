@@ -41,11 +41,9 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            // Start idle transition coroutine if not already started
-            if (idleCoroutine == null)
-            {
-                idleCoroutine = StartCoroutine(SetIdleAfterDelay(0.5f));
-            }
+            skeletonAnimation.AnimationName = "[face]idle"; // Switch to idle animation
+            idleCoroutine = null; // Reset coroutine reference
+
         }
     }
 
@@ -55,10 +53,4 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = movement.normalized * moveSpeed;
     }
 
-    IEnumerator SetIdleAfterDelay(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        skeletonAnimation.AnimationName = "[face]idle"; // Switch to idle animation
-        idleCoroutine = null; // Reset coroutine reference
-    }
-}
+}   

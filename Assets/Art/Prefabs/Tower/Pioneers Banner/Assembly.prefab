@@ -203,6 +203,7 @@ MonoBehaviour:
     m_Bits: 64
   firingPoint: {fileID: 7173730418355606264}
   damage: 5
+  isDisabled: 0
 --- !u!61 &-4850690904493760117
 BoxCollider2D:
   m_ObjectHideFlags: 0

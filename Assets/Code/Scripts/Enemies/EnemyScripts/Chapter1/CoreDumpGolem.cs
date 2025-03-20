@@ -7,9 +7,8 @@ public class CoreDumpGolem : Enemy
     public float slowDuration = 3f;
     public float slowDebuffFactor = 0.5f;
 
-    new void Start()
+    void Start()
     {
-        base.Start();
         hitpoints *= 10; // Very tanky
         moveSpeed /= 2; // Very slow
     }

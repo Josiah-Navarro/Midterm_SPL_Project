@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3086912336710649455}
   - component: {fileID: 4831015171384301129}
   - component: {fileID: 2391253390607253190}
-  - component: {fileID: 1846473137958353597}
+  - component: {fileID: 4072506857132871327}
   m_Layer: 7
   m_Name: Von Neumann Bullet
   m_TagString: Untagged
@@ -153,7 +153,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.0000019073486, y: 0}
   m_Radius: 2.2
---- !u!114 &1846473137958353597
+--- !u!114 &4072506857132871327
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,13 +162,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7862029619940082516}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c776e2e8923ea2d4086dcf8814081229, type: 3}
+  m_Script: {fileID: 11500000, guid: 9af406bf8fabbb640b16fe53cf479fe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4831015171384301129}
   bulletSpeed: 10
   bulletLifetime: 3
-  explosionRadius: 1.5
+  explosionRadius: 3
   explosionDelay: 1.5
   enemyLayer:
     serializedVersion: 2

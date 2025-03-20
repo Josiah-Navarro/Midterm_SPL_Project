@@ -11,9 +11,8 @@ public class NullPointerBeetle : Enemy
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
 
-    new void Start()
+    void Start()
     {
-        base.Start();
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer != null)
         {

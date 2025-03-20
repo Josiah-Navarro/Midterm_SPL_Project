@@ -15,9 +15,8 @@ public class RaceConditionRevenant : Enemy
     private Coroutine disruptionCoroutine;
     private HashSet<BaseTower> affectedTowers = new HashSet<BaseTower>();
 
-    new void Start()
+    void Start()
     {
-        base.Start();
         baseSpeed = moveSpeed;
 
         // Start modifying speed and disrupting tower targeting
@@ -31,7 +30,6 @@ public class RaceConditionRevenant : Enemy
         {
             float randomMultiplier = Random.Range(minSpeedMultiplier, maxSpeedMultiplier);
             moveSpeed = baseSpeed * randomMultiplier;
-            Debug.Log($"[RaceConditionRevenant] Speed changed: {moveSpeed}");
             yield return new WaitForSeconds(speedChangeInterval);
         }
     }
@@ -50,7 +48,6 @@ public class RaceConditionRevenant : Enemy
                 {
                     currentTowers.Add(tower);
                     tower.RandomizeTargetingMode();
-                    Debug.Log($"[RaceConditionRevenant] {tower.name} targeting mode changed.");
                 }
             }
 
@@ -60,7 +57,6 @@ public class RaceConditionRevenant : Enemy
                 if (!currentTowers.Contains(tower))
                 {
                     tower.ResetTargetingMode();
-                    Debug.Log($"[RaceConditionRevenant] {tower.name} targeting mode reset.");
                 }
             }
 
