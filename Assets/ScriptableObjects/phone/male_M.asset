@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24922877eda0bcf4c98a8f83875c427f, type: 3}
+  m_Name: male_M
+  m_EditorClassIdentifier: 
+  contactName: Echo
+  contactIcon: {fileID: 3838508675734187569, guid: e2729f8de5580154eb1b389ddf11d61d, type: 3}
+  dialogueFile: {fileID: 4900000, guid: 990b1fdde95f00b42b3bfd626522d1a2, type: 3}
+  eventCode: 0

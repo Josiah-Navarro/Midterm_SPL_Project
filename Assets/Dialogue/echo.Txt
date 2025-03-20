@@ -1,0 +1,14 @@
+wassup
+my homie
+I'm tony
+/Choose | Good | Bad
+> Good -> I'm glad to hear that!  
+> Bad -> Oh, that's unfortunate.  
+Howdy
+ayayyay
+weeeeeee
+yipeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+/Choose | Woah, Calm Down.
+> Woah, Calm Down. -> Oh, Sorry
+/Await, MissionComplete  
+Now we can continue after the event.  

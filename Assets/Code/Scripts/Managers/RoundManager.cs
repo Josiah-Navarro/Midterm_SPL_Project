@@ -13,6 +13,7 @@ public class RoundManager : MonoBehaviour
     [Header("Events")]
     public UnityEvent OnRoundStart = new UnityEvent();
     public UnityEvent OnRoundEnd = new UnityEvent();
+    public DialogueLoader dl;
 
     private bool roundActive = false;
 
@@ -37,6 +38,7 @@ public class RoundManager : MonoBehaviour
             Debug.Log($"Round {currentRound} starting!");
 
             StartRound();
+            dl.StartConversation("Echo");
 
             // Wait for either 30 seconds to pass or all enemies to be defeated
             float roundTimer = 30f;

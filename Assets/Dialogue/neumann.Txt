@@ -1,0 +1,11 @@
+Neumann
+[Hi! Mathematics is the language of the universe.]
+/Choose: Do you agree? | Absolutely | Not really
+> Absolutely -> [Then you must appreciate the beauty of logic!]
+> Not really -> [Perhaps I can convince you with some elegant equations.]
+[Have you heard of the von Neumann architecture?]
+/Choose: What do you say? | Yes | No
+> Yes -> [Excellent! It revolutionized computing as we know it.]
+> No -> [It’s the foundation of modern computers, with memory and CPU separation.]
+[/Await, QuantumComputing]
+[We must explore quantum computing next!]

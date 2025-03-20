@@ -1,0 +1,11 @@
+Hopper
+[Ah, you're interested in programming!]
+/Choose: What fascinates you? | Debugging | Compilers
+> Debugging -> [Did you know I found an actual moth inside a computer?]
+> Compilers -> [COBOL was my idea, to make programming more readable!]
+[Programming should be for everyone, not just mathematicians.]
+/Choose: Do you agree? | Yes | No
+> Yes -> [Then we must make languages like COBOL more accessible!]
+> No -> [Well, let’s agree to disagree, but I believe in simplifying code.]
+[/Await, CodeEvent]
+[If you ever need a nanosecond, I have a handy wire for you!]

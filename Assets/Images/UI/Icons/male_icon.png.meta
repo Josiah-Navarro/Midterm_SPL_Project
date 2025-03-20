@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c0f9a0468733b8740a2128c0d49321e4
+guid: e2729f8de5580154eb1b389ddf11d61d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6770068414172256912
-    second: female_main_0
+      213: 3838508675734187569
+    second: male_icon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: female_main_0
+      name: male_icon_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 56
-        height: 66
+        width: 27
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 09a54d37a5d14fd50800000000000000
-      internalID: 6770068414172256912
+      spriteID: 13e2464ad4f154530800000000000000
+      internalID: 3838508675734187569
       vertices: []
       indices: 
       edges: []
@@ -147,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      female_main_0: 6770068414172256912
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

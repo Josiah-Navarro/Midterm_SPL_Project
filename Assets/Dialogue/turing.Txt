@@ -1,0 +1,11 @@
+Turing
+[Hello, do you believe machines can think?]
+/Choose: What do you say? | Yes | No
+> Yes -> [Ah, then you might enjoy the Turing Test.]
+> No -> [Interesting, but have you considered how intelligence is defined?]
+[During the war, I worked on breaking the Enigma code.]
+/Choose: Do you want to hear more? | Yes | No
+> Yes -> [It was a race against time, but we cracked it!]
+> No -> [I see, perhaps another time then.]
+[/Await, EnigmaEvent]
+[Let's talk about artificial intelligence next.]
