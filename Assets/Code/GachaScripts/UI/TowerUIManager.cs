@@ -16,26 +16,26 @@ public class TowerUIManager : MonoBehaviour
         Instance = this;
     }
 
-    public void ShowTowerUI(Transform tower)
+    public void ShowTowerUI(BaseTower tower)
     {
         if (currentUIInstance != null)
         {
-            Destroy(currentUIInstance); // Remove old UI if it exists
+            Destroy(currentUIInstance);
         }
 
-        selectedTower = tower;
+        selectedTower = tower.transform; // Store transform separately
 
         // Instantiate the UI near the tower
-        currentUIInstance = Instantiate(towerOptionsPrefab, tower.position, Quaternion.identity);
-        currentUIInstance.transform.SetParent(GameObject.Find("Canvas").transform, false); // Attach to UI canvas
-        currentUIInstance.transform.position = Camera.main.WorldToScreenPoint(tower.position + Vector3.up * 1.5f); // Position above the tower
+        currentUIInstance = Instantiate(towerOptionsPrefab);
+        currentUIInstance.transform.SetParent(GameObject.Find("Canvas").transform, false);
+        currentUIInstance.transform.position = Camera.main.WorldToScreenPoint(tower.transform.position);
 
         // Get buttons and assign functions dynamically
         Button upgradeButton = currentUIInstance.transform.Find("UpgradeButton").GetComponent<Button>();
         Button removeButton = currentUIInstance.transform.Find("RemoveButton").GetComponent<Button>();
 
-        upgradeButton.onClick.AddListener(UpgradeTower);
-        removeButton.onClick.AddListener(RemoveTower);
+        upgradeButton.onClick.AddListener(() => UpgradeTower(tower));
+        removeButton.onClick.AddListener(() => RemoveTower(tower));
     }
 
     public void HideTowerUI()
@@ -47,25 +47,21 @@ public class TowerUIManager : MonoBehaviour
         selectedTower = null;
     }
 
-    private void UpgradeTower()
+    private void UpgradeTower(BaseTower tower)
     {
-        if (selectedTower != null)
+        if (tower != null)
         {
-            BaseTower towerScript = selectedTower.GetComponent<BaseTower>();
-            if (towerScript != null)
-            {
-                towerScript.UpgradeTower();
-            }
+            tower.UpgradeTower();
         }
 
         HideTowerUI();
     }
 
 
-    private void RemoveTower()
+    private void RemoveTower(BaseTower tower)
     {
-        Debug.Log("Removing tower: " + selectedTower.name);
-        Destroy(selectedTower.gameObject);
+        Debug.Log("Removing tower: " + tower.name);
+        Destroy(tower.gameObject);
         HideTowerUI();
     }
 }

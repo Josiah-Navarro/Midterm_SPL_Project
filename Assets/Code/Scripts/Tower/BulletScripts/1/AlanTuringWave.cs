@@ -3,7 +3,7 @@ using UnityEngine;
 public class AlanTuringWave : BaseWave
 {
     [Header("Attributes")]
-    [SerializeField] private float conversionChance = 0.1f;
+    [SerializeField] private float conversionChance = 0.3f;
     [SerializeField] private int decipherDamage = 10;
 
     [Header("Ally Spawn")]

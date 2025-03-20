@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] public bool isConverted = false;
 
     public int pathIndex = 0;
-    private List<Transform> path;
+    public List<Transform> path;
     public Transform target;
     
     public float moveSpeed;

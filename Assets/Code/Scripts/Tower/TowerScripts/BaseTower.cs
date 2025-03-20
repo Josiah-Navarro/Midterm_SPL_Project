@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +30,7 @@ public abstract class BaseTower : MonoBehaviour
     [SerializeField] protected Transform turretRotationPoint;
     [SerializeField] protected LayerMask enemyMask;
     [SerializeField] protected Transform firingPoint;
+    [SerializeField] protected GameObject towerUIPanel;
 
     protected Transform target;
     protected float timeUntilFire;
@@ -227,7 +229,11 @@ public abstract class BaseTower : MonoBehaviour
     {
         targetingMode = TargetingMode.First;
     }
-
+    private void OnMouseDown()
+    {
+        if (EventSystem.current.IsPointerOverGameObject()) return;
+        TowerUIManager.Instance.ShowTowerUI(this);
+    }
 
 #if UNITY_EDITOR
     protected virtual void OnDrawGizmosSelected()

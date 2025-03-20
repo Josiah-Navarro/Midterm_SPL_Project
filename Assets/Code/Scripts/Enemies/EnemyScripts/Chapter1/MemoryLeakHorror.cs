@@ -28,7 +28,13 @@ public class MemoryLeakHorror : Enemy
     {
         if (memoryFragmentPrefab != null)
         {
-            Instantiate(memoryFragmentPrefab, transform.position, Quaternion.identity);
+            int randomPathIndex = Random.Range(0, LevelManager.main.paths.Count);
+            List<Transform> selectedPath = LevelManager.main.paths[randomPathIndex].waypoints;
+
+            GameObject bugFragment = Instantiate(memoryFragmentPrefab, selectedPath[0].position, Quaternion.identity);
+            Enemy bug = bugFragment.GetComponent<Enemy>();
+            bug.Initialize(randomPathIndex);
+            
         }
     }
 }

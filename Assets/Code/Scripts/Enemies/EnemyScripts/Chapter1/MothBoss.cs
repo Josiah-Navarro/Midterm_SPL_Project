@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MothBoss : Enemy
@@ -23,7 +24,11 @@ public class MothBoss : Enemy
         while (hitpoints > 0)
         {
             yield return new WaitForSeconds(spawnInterval);
-            Instantiate(smallBugPrefab, transform.position, Quaternion.identity);
+            int randomPathIndex = Random.Range(0, LevelManager.main.paths.Count);
+            List<Transform> selectedPath = LevelManager.main.paths[randomPathIndex].waypoints;
+            GameObject bug = Instantiate(smallBugPrefab, transform.position, Quaternion.identity);
+            Enemy bugScript = bug.GetComponent<Enemy>();
+            bugScript.Initialize(randomPathIndex);
             DisableNearbyTowers();
         }
     }

@@ -48,7 +48,6 @@ public class Plot : MonoBehaviour
     {
         if (tower != null) {
             Debug.LogWarning("Cannot Be Placed Here");
-            TowerUIManager.Instance.ShowTowerUI(tower.transform);
             return;
         }
 

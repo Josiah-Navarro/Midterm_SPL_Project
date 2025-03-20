@@ -172,8 +172,8 @@ MonoBehaviour:
   aoeDamageRatio: 0.25
   enemyMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   spriteRenderer: {fileID: 0}
   baseColor: {r: 0, g: 0, b: 1, a: 1}
   chargedColor: {r: 0, g: 1, b: 1, a: 1}
-  explosionEffectPrefab: {fileID: 0}
+  explosionEffectPrefab: {fileID: 2705530676022568594, guid: 89185dc2c5d978d44af94add8e34d0ea, type: 3}
