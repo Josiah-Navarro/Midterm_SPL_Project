@@ -12837,7 +12837,7 @@ MonoBehaviour:
     isWaterTower: 0
   - name: Von Neuman Tower
     cost: 50
-    prefab: {fileID: 5135398175848266765, guid: 1586c1c3d912f0a4fb8c7ee863ce6b84, type: 3}
+    prefab: {fileID: 5070734517988311439, guid: b257f9abfeae0cb489d4a0ed2b1d0c70, type: 3}
     isWaterTower: 0
   - name: Bucanner Tower
     cost: 50

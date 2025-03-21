@@ -190,13 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84aa0ae0c228e8c43a6e674443591e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerName: Machine Code Tower
-  attackRange: 2
-  attackSpeed: 3
-  originalDamage: 3
-  rotationSpeed: 1000
-  bulletPrefab: {fileID: 7342037630946578433, guid: dda6b0bdbaac0b949b98fc8eb5caedc3, type: 3}
-  collider2D: {fileID: 1860752405312902226}
+  towerData: {fileID: 11400000, guid: 3fc1fcaf019a9f2469039076a0d23318, type: 2}
   turretRotationPoint: {fileID: 2234737151534793583}
   enemyMask:
     serializedVersion: 2
