@@ -7,12 +7,19 @@ using TMPro;
 public class SummonManager : MonoBehaviour
 {
     public Transform resultPanel; // Where the pulled towers will be displayed
+    public GameObject ActiveBannerDisplay;
     private BannerData selectedBanner;
     private int summonCount;
 
     public void SetSelectedBanner(BannerData _banner)
     {
         selectedBanner = _banner;
+        if (ActiveBannerDisplay != null && selectedBanner.bannerImage != null)
+        {
+            // Get the Image component directly from the Panel
+            ActiveBannerDisplay.GetComponent<Image>().sprite = selectedBanner.bannerImage;
+            ActiveBannerDisplay.SetActive(true);
+        }
     }
 
     public void SetPullAmount(int _amount)
@@ -53,18 +60,22 @@ public class SummonManager : MonoBehaviour
             TowerData pulledTower = selectedBanner.GetRandomTower();
             pulledTowers.Add(pulledTower);
         }
-        
+
         TowerInventory.Instance.AddSummonedTowers(pulledTowers);
         DisplaySummonResults(pulledTowers);
     }
 
     private void DisplaySummonResults(List<TowerData> pulledTowers)
     {
+        ActiveBannerDisplay.SetActive(false);
+
+        // Clear previous results
         foreach (Transform child in resultPanel)
         {
-            Destroy(child.gameObject); // Clear previous results
+            Destroy(child.gameObject);
         }
 
+        // Display new results
         foreach (TowerData tower in pulledTowers)
         {
             GameObject textObj = new GameObject("SummonResultText", typeof(TextMeshProUGUI));
@@ -75,5 +86,21 @@ public class SummonManager : MonoBehaviour
             textComponent.fontSize = 14;
             textComponent.alignment = TextAlignmentOptions.Center;
         }
+
+        StartCoroutine(WaitForInputThenClear());
     }
+
+    private IEnumerator WaitForInputThenClear()
+    {
+        yield return new WaitForSeconds(2f);
+        yield return new WaitUntil(() => Input.anyKeyDown || Input.GetMouseButtonDown(0));
+
+        foreach (Transform child in resultPanel)
+        {
+            Destroy(child.gameObject);
+        }
+
+        ActiveBannerDisplay.SetActive(true);
+    }
+
 }

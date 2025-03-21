@@ -39,7 +39,9 @@ public class BuildManager : MonoBehaviour
     {
         if (selectedTowerID > -1 && towerDictionary.ContainsKey(selectedTowerID))
         {
+            Debug.Log($"Tower with ID {selectedTowerID} found!");
             return towerDictionary[selectedTowerID];
+
         }
         return null;
     }

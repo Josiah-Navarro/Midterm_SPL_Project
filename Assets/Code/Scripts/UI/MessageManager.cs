@@ -48,9 +48,14 @@ public class MessageManager : MonoBehaviour
     {
         Debug.Log("MessageManager: Updating chat display for " + currentContact);
 
+        if (!chatHistory.ContainsKey(currentContact))
+        {
+            Debug.LogWarning("MessageManager: No chat history found for " + currentContact + ". Initializing new entry.");
+            chatHistory[currentContact] = new List<string>(); // Create an empty list
+        }
+
         foreach (Transform child in chatPanel)
         {
-            // Prevent deletion of the scrollbar
             if (child.GetComponent<Scrollbar>() == null)
             {
                 Destroy(child.gameObject);
@@ -63,8 +68,7 @@ public class MessageManager : MonoBehaviour
             TMP_Text textComponent = msg.GetComponentInChildren<TMP_Text>();
             textComponent.text = message;
 
-            // Change panel color based on sender
-            Image panelImage = msg.GetComponent<Image>();  // Get the Panel's Image component
+            Image panelImage = msg.GetComponent<Image>();
             if (panelImage != null)
             {
                 if (!message.StartsWith("Player"))
@@ -75,12 +79,12 @@ public class MessageManager : MonoBehaviour
                 }
             }
         }
+
         Canvas.ForceUpdateCanvases();
         LayoutRebuilder.ForceRebuildLayoutImmediate(chatPanel.GetComponent<RectTransform>());
-
-        // Auto-scroll
         ScrollToBottom();
     }
+
 
     private void UpdateChatDisplay(string contact)
     {

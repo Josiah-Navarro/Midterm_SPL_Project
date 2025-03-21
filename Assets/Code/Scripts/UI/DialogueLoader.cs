@@ -35,8 +35,7 @@ public class DialogueLoader : MonoBehaviour
         }
 
         // Set up contact UI
-        controller.Setup(contactData.contactName, messageManager);
-        contactObj.GetComponentAtIndex(2).GetComponentInChildren<Image>().sprite = contactData.contactIcon;
+        controller.Setup(contactData.contactName, messageManager, contactData.contactIcon);
 
         // Load dialogue from text file
         List<string> dialogueLines = new List<string>(contactData.dialogueFile.text.Split('\n'));
@@ -60,6 +59,20 @@ public class DialogueLoader : MonoBehaviour
         }
         Debug.LogError("DialogueLoader: No contact found for event " + eventCode);
     }
+
+    public void TriggerEvent(string contactName, string eventCode)
+    {
+        if (contactDialogues.TryGetValue(contactName, out DialogueController controller))
+        {
+            controller.addEventCode(eventCode); // Add the event code to the list
+            Debug.Log($"DialogueLoader: Added event code '{eventCode}' to {contactName}");
+        }
+        else
+        {
+            Debug.LogError($"DialogueLoader: Contact '{contactName}' not found in active dialogues!");
+        }
+    }
+
 
     public void StartConversation(string contactName)
     {

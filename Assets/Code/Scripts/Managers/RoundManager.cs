@@ -47,7 +47,8 @@ public class RoundManager : MonoBehaviour
                 roundTimer -= Time.deltaTime;
                 yield return null;
             }
-
+            dl.StartConversation("Turing");
+            
             Debug.Log($"Round {currentRound} ending!");
             EndRound();
         }

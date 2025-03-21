@@ -1,31 +1,80 @@
 using UnityEngine;
-using UnityEngine.UI;
+using System.Collections.Generic;
+
+[System.Serializable]
+public class ScreenKey
+{
+    public GameObject targetObject;
+    public KeyCode toggleKey;
+}
 
 public class PhoneManager : MonoBehaviour
 {
-    public GameObject phoneUI;
-    public GameObject messagesScreen, purifierScreen, inboxScreen, gachaScreen;
+    public GameObject PhoneUI;
+    public List<ScreenKey> ScreenKey = new List<ScreenKey>();
+    private GameObject activeScreen = null;
 
     void Start()
     {
-        phoneUI.SetActive(false); // Start with phone hidden
-        ShowApp(null); // Hide all apps
+        // Ensure all screens are hidden but active at the start
+        foreach (var pair in ScreenKey)
+        {
+            if (pair.targetObject != null)
+                SetVisibility(pair.targetObject, false);
+        }
+        SetVisibility(PhoneUI, false);
     }
 
-    public void TogglePhone()
+    void Update()
     {
-        phoneUI.SetActive(!phoneUI.activeSelf);
+        foreach (var pair in ScreenKey)
+        {
+            if (Input.GetKeyDown(pair.toggleKey) && pair.targetObject != null)
+            {
+                if (activeScreen == pair.targetObject && IsVisible(pair.targetObject))
+                {
+                    SetVisibility(PhoneUI, false);
+                    SetVisibility(activeScreen, false);
+                    activeScreen = null;
+                }
+                else
+                {
+                    SetVisibility(PhoneUI, true);
+                    Activate(pair.targetObject);
+                }
+            }
+        }
     }
 
-    public void ShowApp(GameObject appScreen)
+    void Activate(GameObject newActive)
     {
-        // Hide all screens
-        messagesScreen.SetActive(false);
-        purifierScreen.SetActive(false);
-        inboxScreen.SetActive(false);
-        gachaScreen.SetActive(false);
+        // Hide all other screens
+        foreach (var pair in ScreenKey)
+        {
+            if (pair.targetObject != null)
+                SetVisibility(pair.targetObject, false);
+        }
 
-        // Show selected screen if any
-        if (appScreen != null) appScreen.SetActive(true);
+        // Show the new active screen
+        SetVisibility(newActive, true);
+        activeScreen = newActive;
+    }
+
+    void SetVisibility(GameObject obj, bool visible)
+    {
+        CanvasGroup canvasGroup = obj.GetComponent<CanvasGroup>();
+        if (canvasGroup == null)
+        {
+            canvasGroup = obj.AddComponent<CanvasGroup>();
+        }
+        canvasGroup.alpha = visible ? 1 : 0;
+        canvasGroup.interactable = visible;
+        canvasGroup.blocksRaycasts = visible;
+    }
+
+    bool IsVisible(GameObject obj)
+    {
+        CanvasGroup canvasGroup = obj.GetComponent<CanvasGroup>();
+        return canvasGroup != null && canvasGroup.alpha > 0;
     }
 }

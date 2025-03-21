@@ -19,18 +19,19 @@ public class BannerData : ScriptableObject
         List<TowerData> ultraTowers = allTowers.Where(t => t.rarity == "U").ToList();
         List<TowerData> superTowers = allTowers.Where(t => t.rarity == "S").ToList();
 
-        if (roll <= 1f && superTowers.Count > 0) 
+        if (roll <= 1f && superTowers.Count > 0)
             return superTowers[Random.Range(0, superTowers.Count)];  // S-rank (1%)
-        else if (roll <= 10f && ultraTowers.Count > 0) 
+        else if (roll <= 10f && ultraTowers.Count > 0)
             return ultraTowers[Random.Range(0, ultraTowers.Count)];  // U-rank (9%)
-        else if (roll <= 40f && rareTowers.Count > 0) 
+        else if (roll <= 40f && rareTowers.Count > 0)
             return rareTowers[Random.Range(0, rareTowers.Count)];  // R-rank (30%)
-        else 
+        else
             return commonTowers[Random.Range(0, commonTowers.Count)];  // C-rank (60%)
     }
 }
 
-public enum Rarity{
+public enum Rarity
+{
     C,
     R,
     U,

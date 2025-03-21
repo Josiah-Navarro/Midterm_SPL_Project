@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using System;
 
 public class DialogueController : MonoBehaviour
 {
@@ -14,16 +15,21 @@ public class DialogueController : MonoBehaviour
     private bool awaitingEvent = false;
     private string waitingForEvent = "";
     private bool waiting = false;
+
+    private List<string> codes = new List<string>();
+
+    public Image icon;
     public Button button;
 
     private bool hasPendingReply = false;
     private string pendingReplyOptions = "";
 
 
-    public void Setup(string name, MessageManager manager)
+    public void Setup(string name, MessageManager manager, Sprite icon)
     {
         messageManager = manager;
         changeName(name);
+        this.icon.sprite = icon;
         button.onClick.AddListener(OnClick);
         Debug.Log("DialogueController: Setup complete for " + name);
     }
@@ -69,7 +75,8 @@ public class DialogueController : MonoBehaviour
             else if (line.StartsWith("/Await"))
             {
                 awaitingEvent = true;
-                waitingForEvent = line.Replace("/Await ", "").Trim();
+
+                waitingForEvent = line.Replace("/Await, ", "").Trim();
                 Debug.Log("DialogueController: Awaiting event " + waitingForEvent);
             }
             else
@@ -135,21 +142,6 @@ public class DialogueController : MonoBehaviour
         Debug.Log("DialogueController: Dialogue queue finished for " + contactName);
     }
 
-
-    public void TriggerEvent(string eventCode)
-    {
-        if (awaitingEvent && waitingForEvent == eventCode)
-        {
-            awaitingEvent = false;
-            Debug.Log("DialogueController: Event triggered " + eventCode + ", resuming dialogue.");
-            StartDialogue();
-        }
-        else
-        {
-            Debug.LogError("DialogueController: Unexpected event trigger " + eventCode + " while waiting for " + waitingForEvent);
-        }
-    }
-
     public void HandleReply(string chosenOption)
     {
         waiting = false;
@@ -166,8 +158,8 @@ public class DialogueController : MonoBehaviour
             // Add NPC response
             messageManager.AddMessage(contactName, npcResponse, false);
             StartDialogue();
-            hasPendingReply=false;
-            pendingReplyOptions="";
+            hasPendingReply = false;
+            pendingReplyOptions = "";
         }
         else
         {
@@ -181,6 +173,44 @@ public class DialogueController : MonoBehaviour
         else
             Debug.Log("No pending");
     }
+    public void TriggerEvent(string eventCode)
+    {
+        if (codes.Contains(eventCode))
+        {
+            codes.Remove(eventCode); // Remove the used event
+            Debug.Log($"DialogueController: Event '{eventCode}' was in the list, resuming dialogue.");
+            awaitingEvent = false;
+            StartDialogue();
+        }
+        else if (awaitingEvent && waitingForEvent == eventCode)
+        {
+            awaitingEvent = false;
+            Debug.Log($"DialogueController: Event triggered '{eventCode}', resuming dialogue.");
+            StartDialogue();
+        }
+        else
+        {
+            Debug.Log($"DialogueController: Event '{eventCode}' stored for later.");
+            codes.Add(eventCode); // Store event for future use
+        }
+    }
 
+    internal void addEventCode(string eventCode)
+    {
+        if (!codes.Contains(eventCode))
+        {
+            codes.Add(eventCode);
+            Debug.Log($"DialogueController: Added event code '{eventCode}'");
+
+            // Check if this event can resume a waiting conversation
+            if (awaitingEvent && waitingForEvent == eventCode)
+            {
+                codes.Remove(eventCode);
+                awaitingEvent = false;
+                Debug.Log($"DialogueController: Event '{eventCode}' matched waiting event, resuming dialogue.");
+                StartDialogue();
+            }
+        }
+    }
 }
 
