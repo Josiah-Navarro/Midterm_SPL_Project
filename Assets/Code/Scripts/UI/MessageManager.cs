@@ -14,7 +14,6 @@ public class MessageManager : MonoBehaviour
     public GameObject cPanel;
     public GameObject replyPanel;
     public GameObject replyButtonPrefab;
-    public Button backButton;
     private Dictionary<string, List<string>> chatHistory = new Dictionary<string, List<string>>();
     private string currentContact;
     private DialogueController activeDialogueController;

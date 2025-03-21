@@ -15,7 +15,7 @@ MonoBehaviour:
   bannerName: The Pioneer
   bannerImage: {fileID: -8465836497263030070, guid: bf4d0749dff9b904ea6bf53690eb1caa, type: 3}
   allTowers:
-  - {fileID: 11400000, guid: 3fc1fcaf019a9f2469039076a0d23318, type: 2}
+  - {fileID: 11400000, guid: 9244bce5451f9fe45b94dab569d61e33, type: 2}
   - {fileID: 11400000, guid: d70e81c08a5a6e2469477587886a0546, type: 2}
   - {fileID: 11400000, guid: 01ba7ad046a1b844ea358ce07cec44fe, type: 2}
   - {fileID: 11400000, guid: bcff890126724f94a81ce11c6841f3eb, type: 2}

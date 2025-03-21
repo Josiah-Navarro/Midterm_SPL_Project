@@ -1,0 +1,1833 @@
+fileFormatVersion: 2
+guid: 03e1cc66acf55cb4083cf61251781b0b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2985541618261175484
+    second: char_222_bpipe_epoque#28_0
+  - first:
+      213: 6610995421745777984
+    second: char_222_bpipe_epoque#28_1
+  - first:
+      213: 8899411616673668019
+    second: char_222_bpipe_epoque#28_2
+  - first:
+      213: 4826059706410820261
+    second: char_222_bpipe_epoque#28_3
+  - first:
+      213: -7920546162400185551
+    second: char_222_bpipe_epoque#28_4
+  - first:
+      213: -9122396595371067320
+    second: char_222_bpipe_epoque#28_5
+  - first:
+      213: -556276784422268587
+    second: char_222_bpipe_epoque#28_6
+  - first:
+      213: 2111768228097774328
+    second: char_222_bpipe_epoque#28_7
+  - first:
+      213: -2409163009990242193
+    second: char_222_bpipe_epoque#28_8
+  - first:
+      213: -5025645021047970857
+    second: char_222_bpipe_epoque#28_9
+  - first:
+      213: 3045856651849272991
+    second: char_222_bpipe_epoque#28_10
+  - first:
+      213: -5155046506708653667
+    second: char_222_bpipe_epoque#28_11
+  - first:
+      213: 677447329102003448
+    second: char_222_bpipe_epoque#28_12
+  - first:
+      213: -6506863675013438562
+    second: char_222_bpipe_epoque#28_13
+  - first:
+      213: -8313645294440837648
+    second: char_222_bpipe_epoque#28_14
+  - first:
+      213: -3245727494684081147
+    second: char_222_bpipe_epoque#28_15
+  - first:
+      213: -2243769117851746687
+    second: char_222_bpipe_epoque#28_16
+  - first:
+      213: 3049560844862626857
+    second: char_222_bpipe_epoque#28_17
+  - first:
+      213: 2382727123458167930
+    second: char_222_bpipe_epoque#28_18
+  - first:
+      213: 9054588565030754429
+    second: char_222_bpipe_epoque#28_19
+  - first:
+      213: -6621128789382511743
+    second: char_222_bpipe_epoque#28_20
+  - first:
+      213: 6028028993543252031
+    second: char_222_bpipe_epoque#28_21
+  - first:
+      213: -1866459685433720031
+    second: char_222_bpipe_epoque#28_22
+  - first:
+      213: -1203057357234973287
+    second: char_222_bpipe_epoque#28_23
+  - first:
+      213: -846352464410332410
+    second: char_222_bpipe_epoque#28_24
+  - first:
+      213: -4125622160094988215
+    second: char_222_bpipe_epoque#28_25
+  - first:
+      213: -1937653179825589347
+    second: char_222_bpipe_epoque#28_26
+  - first:
+      213: 3931194160896969058
+    second: char_222_bpipe_epoque#28_27
+  - first:
+      213: -6023340609864088831
+    second: char_222_bpipe_epoque#28_28
+  - first:
+      213: -7719451933245333096
+    second: char_222_bpipe_epoque#28_29
+  - first:
+      213: -7458895526697151895
+    second: char_222_bpipe_epoque#28_30
+  - first:
+      213: -4348216613964124073
+    second: char_222_bpipe_epoque#28_31
+  - first:
+      213: 5590830795826699756
+    second: char_222_bpipe_epoque#28_32
+  - first:
+      213: 6242426525571022092
+    second: char_222_bpipe_epoque#28_33
+  - first:
+      213: -1190034703496117007
+    second: char_222_bpipe_epoque#28_34
+  - first:
+      213: 1179280428154539744
+    second: char_222_bpipe_epoque#28_35
+  - first:
+      213: 4792547255416259726
+    second: char_222_bpipe_epoque#28_36
+  - first:
+      213: -5790525769169693974
+    second: char_222_bpipe_epoque#28_37
+  - first:
+      213: -2330711560805606951
+    second: char_222_bpipe_epoque#28_38
+  - first:
+      213: -2317518593118138507
+    second: char_222_bpipe_epoque#28_39
+  - first:
+      213: -828324067840750575
+    second: char_222_bpipe_epoque#28_40
+  - first:
+      213: 6700229736284787950
+    second: char_222_bpipe_epoque#28_41
+  - first:
+      213: 6584824912936722349
+    second: char_222_bpipe_epoque#28_42
+  - first:
+      213: 6867268836027792598
+    second: char_222_bpipe_epoque#28_43
+  - first:
+      213: 1181941452071971672
+    second: char_222_bpipe_epoque#28_44
+  - first:
+      213: -5988480048740354890
+    second: char_222_bpipe_epoque#28_45
+  - first:
+      213: 4920515420036265888
+    second: char_222_bpipe_epoque#28_46
+  - first:
+      213: 3548950221018857996
+    second: char_222_bpipe_epoque#28_47
+  - first:
+      213: 5298671296989077327
+    second: char_222_bpipe_epoque#28_48
+  - first:
+      213: 2999995476125078468
+    second: char_222_bpipe_epoque#28_49
+  - first:
+      213: -7358284885782520966
+    second: char_222_bpipe_epoque#28_50
+  - first:
+      213: 4671500066358037719
+    second: char_222_bpipe_epoque#28_51
+  - first:
+      213: -4292974415803396130
+    second: char_222_bpipe_epoque#28_52
+  - first:
+      213: 5420019519317923300
+    second: char_222_bpipe_epoque#28_53
+  - first:
+      213: 8236699246647820034
+    second: char_222_bpipe_epoque#28_54
+  - first:
+      213: -4702022286813591937
+    second: char_222_bpipe_epoque#28_55
+  - first:
+      213: -4475697417304042396
+    second: char_222_bpipe_epoque#28_56
+  - first:
+      213: 6454218399312775895
+    second: char_222_bpipe_epoque#28_57
+  - first:
+      213: 5678587936865186519
+    second: char_222_bpipe_epoque#28_58
+  - first:
+      213: 1530621032660831255
+    second: char_222_bpipe_epoque#28_59
+  - first:
+      213: 3704686862970162059
+    second: char_222_bpipe_epoque#28_60
+  - first:
+      213: 4595985551635263370
+    second: char_222_bpipe_epoque#28_61
+  - first:
+      213: -7830606366374052463
+    second: char_222_bpipe_epoque#28_62
+  - first:
+      213: 2400729413019270301
+    second: char_222_bpipe_epoque#28_63
+  - first:
+      213: -2483868425423711534
+    second: char_222_bpipe_epoque#28_64
+  - first:
+      213: -2907302025869083863
+    second: char_222_bpipe_epoque#28_65
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 0
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 107
+        width: 44
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbc2a92a846ce6920800000000000000
+      internalID: 2985541618261175484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_1
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 107
+        width: 48
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04d04ec3f49febb50800000000000000
+      internalID: 6610995421745777984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_2
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 124
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bb91d9d6bf018b70800000000000000
+      internalID: 8899411616673668019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_3
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 123
+        width: 34
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a26171cbbb99f240800000000000000
+      internalID: 4826059706410820261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_4
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 133
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 133bd0bea31941290800000000000000
+      internalID: -7920546162400185551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_5
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 123
+        width: 33
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 848bca801acb66180800000000000000
+      internalID: -9122396595371067320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_6
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 133
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 551d6bb3635b748f0800000000000000
+      internalID: -556276784422268587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_7
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 133
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f259bbc3028e4d10800000000000000
+      internalID: 2111768228097774328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_8
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 128
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f605587b10fe09ed0800000000000000
+      internalID: -2409163009990242193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_9
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 127
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d3a939fa72514ab0800000000000000
+      internalID: -5025645021047970857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_10
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 126
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9e8c3abc7e054a20800000000000000
+      internalID: 3045856651849272991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_11
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 108
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d992307c3889578b0800000000000000
+      internalID: -5155046506708653667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_12
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 119
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fc792da1c6c66900800000000000000
+      internalID: 677447329102003448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_13
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 125
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e936ee066f9f2b5a0800000000000000
+      internalID: -6506863675013438562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_14
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 130
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fd814cf6afff9c80800000000000000
+      internalID: -8313645294440837648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_15
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 130
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50403a94a0cd4f2d0800000000000000
+      internalID: -3245727494684081147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_16
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 129
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18e747410e78cd0e0800000000000000
+      internalID: -2243769117851746687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_17
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 128
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92c1afe5e67325a20800000000000000
+      internalID: 3049560844862626857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_18
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 123
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a74996ec1b5211120800000000000000
+      internalID: 2382727123458167930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_19
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 125
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d78d8fd935c58ad70800000000000000
+      internalID: 9054588565030754429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_20
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 99
+        width: 86
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1834eb042760d14a0800000000000000
+      internalID: -6621128789382511743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_21
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 95
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f38a6e78e6cd7a350800000000000000
+      internalID: 6028028993543252031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_22
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 93
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 123c2261ec00916e0800000000000000
+      internalID: -1866459685433720031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_23
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 119
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 995d69925b1ed4fe0800000000000000
+      internalID: -1203057357234973287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_24
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 105
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 603bb04fae62144f0800000000000000
+      internalID: -846352464410332410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_25
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 120
+        width: 26
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 948fe0ef088deb6c0800000000000000
+      internalID: -4125622160094988215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_26
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 101
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d93f696f2b21c15e0800000000000000
+      internalID: -1937653179825589347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_27
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 123
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2698a5fc2486e8630800000000000000
+      internalID: 3931194160896969058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_28
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 101
+        width: 11
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 103cddbd0abc86ca0800000000000000
+      internalID: -6023340609864088831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_29
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 107
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 891a53abd5ffed490800000000000000
+      internalID: -7719451933245333096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_30
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 107
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9625772990eac7890800000000000000
+      internalID: -7458895526697151895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_31
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 109
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7507736070808a3c0800000000000000
+      internalID: -4348216613964124073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_32
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 86
+        width: 11
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ced9090ccfe969d40800000000000000
+      internalID: 5590830795826699756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_33
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 104
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0df229e9dd81a650800000000000000
+      internalID: 6242426525571022092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_34
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 104
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f40ab30eb52c7fe0800000000000000
+      internalID: -1190034703496117007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_35
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 97
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eec8b22d45ad5010800000000000000
+      internalID: 1179280428154539744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_36
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1
+        width: 98
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e840c58365c828240800000000000000
+      internalID: 4792547255416259726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_37
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 67
+        width: 71
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae215e11e7be3afa0800000000000000
+      internalID: -5790525769169693974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_38
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 79
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d919402f26a7afd0800000000000000
+      internalID: -2330711560805606951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_39
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 49
+        width: 35
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57f84d84e1586dfd0800000000000000
+      internalID: -2317518593118138507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_40
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 49
+        width: 22
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11c027126a33184f0800000000000000
+      internalID: -828324067840750575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_41
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 85
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee493c0227ffbfc50800000000000000
+      internalID: 6700229736284787950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_42
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 88
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daf5cb3de5ff16b50800000000000000
+      internalID: 6584824912936722349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_43
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 87
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dcfb8c3f907d4f50800000000000000
+      internalID: 6867268836027792598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_44
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 87
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85b2f0c0d79176010800000000000000
+      internalID: 1181941452071971672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_45
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 81
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b4315ebf15a4eca0800000000000000
+      internalID: -5988480048740354890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_46
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 72
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a7f71b54be294440800000000000000
+      internalID: 4920515420036265888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_47
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 71
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c028f514c67604130800000000000000
+      internalID: 3548950221018857996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_48
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 66
+        width: 29
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4f97969879a88940800000000000000
+      internalID: 5298671296989077327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_49
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 66
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c3d63aadff12a920800000000000000
+      internalID: 2999995476125078468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_50
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 52
+        width: 41
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7b9ecad1ee12e990800000000000000
+      internalID: -7358284885782520966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_51
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 52
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dc0c774f8084d040800000000000000
+      internalID: 4671500066358037719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_52
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 69
+        width: 6
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edfc234938a4c64c0800000000000000
+      internalID: -4292974415803396130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_53
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 39
+        width: 22
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e5d0ac4907c73b40800000000000000
+      internalID: 5420019519317923300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_54
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 39
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20fbb2e2352ae4270800000000000000
+      internalID: 8236699246647820034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_55
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 44
+        width: 38
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f76818c74af0fbeb0800000000000000
+      internalID: -4702022286813591937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_56
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1
+        width: 71
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 464957789e023e1c0800000000000000
+      internalID: -4475697417304042396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_57
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 50
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7da04d1307df19950800000000000000
+      internalID: 6454218399312775895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_58
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 1
+        width: 62
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d2faa264a56ece40800000000000000
+      internalID: 5678587936865186519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_59
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 44
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71c8d7938bbdd3510800000000000000
+      internalID: 1530621032660831255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_60
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 44
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8b8467d211b96330800000000000000
+      internalID: 3704686862970162059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_61
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1
+        width: 72
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8f2c06328838cf30800000000000000
+      internalID: 4595985551635263370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_62
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1
+        width: 68
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19dbc548ff8145390800000000000000
+      internalID: -7830606366374052463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_63
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 29
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9c78d87eaa115120800000000000000
+      internalID: 2400729413019270301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_64
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 1
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d29fc1c3d6878dd0800000000000000
+      internalID: -2483868425423711534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_222_bpipe_epoque#28_65
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92bbc45063037a7d0800000000000000
+      internalID: -2907302025869083863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      char_222_bpipe_epoque#28_0: 2985541618261175484
+      char_222_bpipe_epoque#28_1: 6610995421745777984
+      char_222_bpipe_epoque#28_10: 3045856651849272991
+      char_222_bpipe_epoque#28_11: -5155046506708653667
+      char_222_bpipe_epoque#28_12: 677447329102003448
+      char_222_bpipe_epoque#28_13: -6506863675013438562
+      char_222_bpipe_epoque#28_14: -8313645294440837648
+      char_222_bpipe_epoque#28_15: -3245727494684081147
+      char_222_bpipe_epoque#28_16: -2243769117851746687
+      char_222_bpipe_epoque#28_17: 3049560844862626857
+      char_222_bpipe_epoque#28_18: 2382727123458167930
+      char_222_bpipe_epoque#28_19: 9054588565030754429
+      char_222_bpipe_epoque#28_2: 8899411616673668019
+      char_222_bpipe_epoque#28_20: -6621128789382511743
+      char_222_bpipe_epoque#28_21: 6028028993543252031
+      char_222_bpipe_epoque#28_22: -1866459685433720031
+      char_222_bpipe_epoque#28_23: -1203057357234973287
+      char_222_bpipe_epoque#28_24: -846352464410332410
+      char_222_bpipe_epoque#28_25: -4125622160094988215
+      char_222_bpipe_epoque#28_26: -1937653179825589347
+      char_222_bpipe_epoque#28_27: 3931194160896969058
+      char_222_bpipe_epoque#28_28: -6023340609864088831
+      char_222_bpipe_epoque#28_29: -7719451933245333096
+      char_222_bpipe_epoque#28_3: 4826059706410820261
+      char_222_bpipe_epoque#28_30: -7458895526697151895
+      char_222_bpipe_epoque#28_31: -4348216613964124073
+      char_222_bpipe_epoque#28_32: 5590830795826699756
+      char_222_bpipe_epoque#28_33: 6242426525571022092
+      char_222_bpipe_epoque#28_34: -1190034703496117007
+      char_222_bpipe_epoque#28_35: 1179280428154539744
+      char_222_bpipe_epoque#28_36: 4792547255416259726
+      char_222_bpipe_epoque#28_37: -5790525769169693974
+      char_222_bpipe_epoque#28_38: -2330711560805606951
+      char_222_bpipe_epoque#28_39: -2317518593118138507
+      char_222_bpipe_epoque#28_4: -7920546162400185551
+      char_222_bpipe_epoque#28_40: -828324067840750575
+      char_222_bpipe_epoque#28_41: 6700229736284787950
+      char_222_bpipe_epoque#28_42: 6584824912936722349
+      char_222_bpipe_epoque#28_43: 6867268836027792598
+      char_222_bpipe_epoque#28_44: 1181941452071971672
+      char_222_bpipe_epoque#28_45: -5988480048740354890
+      char_222_bpipe_epoque#28_46: 4920515420036265888
+      char_222_bpipe_epoque#28_47: 3548950221018857996
+      char_222_bpipe_epoque#28_48: 5298671296989077327
+      char_222_bpipe_epoque#28_49: 2999995476125078468
+      char_222_bpipe_epoque#28_5: -9122396595371067320
+      char_222_bpipe_epoque#28_50: -7358284885782520966
+      char_222_bpipe_epoque#28_51: 4671500066358037719
+      char_222_bpipe_epoque#28_52: -4292974415803396130
+      char_222_bpipe_epoque#28_53: 5420019519317923300
+      char_222_bpipe_epoque#28_54: 8236699246647820034
+      char_222_bpipe_epoque#28_55: -4702022286813591937
+      char_222_bpipe_epoque#28_56: -4475697417304042396
+      char_222_bpipe_epoque#28_57: 6454218399312775895
+      char_222_bpipe_epoque#28_58: 5678587936865186519
+      char_222_bpipe_epoque#28_59: 1530621032660831255
+      char_222_bpipe_epoque#28_6: -556276784422268587
+      char_222_bpipe_epoque#28_60: 3704686862970162059
+      char_222_bpipe_epoque#28_61: 4595985551635263370
+      char_222_bpipe_epoque#28_62: -7830606366374052463
+      char_222_bpipe_epoque#28_63: 2400729413019270301
+      char_222_bpipe_epoque#28_64: -2483868425423711534
+      char_222_bpipe_epoque#28_65: -2907302025869083863
+      char_222_bpipe_epoque#28_7: 2111768228097774328
+      char_222_bpipe_epoque#28_8: -2409163009990242193
+      char_222_bpipe_epoque#28_9: -5025645021047970857
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
