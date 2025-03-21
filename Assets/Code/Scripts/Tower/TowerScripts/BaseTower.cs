@@ -36,9 +36,9 @@ public abstract class BaseTower : MonoBehaviour
     protected float timeUntilFire;
     protected TargetingMode targetingMode = TargetingMode.First;
     
-    private int upgradeLevel = 0;
+    private int upgradeLevel = 1;
     private const int maxUpgradeLevel = 10; //Up to 300%
-    private const float upgradeMultiplier = 1.2f; 
+    private const float upgradeMultiplier = 0.2f; 
 
     protected float currentAttackRange;
     protected float currentAttackSpeed;
@@ -156,9 +156,9 @@ public abstract class BaseTower : MonoBehaviour
         else
         {
             // Apply upgrade multiplier if it's beyond level 1
-            currentAttackRange = attackRange * Mathf.Pow(upgradeMultiplier, upgradeLevel - 1);
-            currentAttackSpeed = attackSpeed * Mathf.Pow(upgradeMultiplier, upgradeLevel - 1);
-            damage = Mathf.RoundToInt(originalDamage * Mathf.Pow(upgradeMultiplier, upgradeLevel - 1));
+            currentAttackRange = attackRange + (upgradeMultiplier * upgradeLevel);
+            currentAttackSpeed = attackSpeed + (upgradeMultiplier * upgradeLevel);
+            damage = Mathf.RoundToInt(originalDamage + (upgradeMultiplier * upgradeLevel));
         }
 
     }
@@ -212,9 +212,9 @@ public abstract class BaseTower : MonoBehaviour
 
         // Upgrade Stats
         upgradeLevel++;
-        currentAttackRange = attackRange * Mathf.Pow(upgradeMultiplier, upgradeLevel);
-        currentAttackSpeed = attackSpeed * Mathf.Pow(upgradeMultiplier, upgradeLevel);
-        damage = Mathf.RoundToInt(originalDamage * Mathf.Pow(upgradeMultiplier, upgradeLevel));
+        currentAttackRange = attackRange + (upgradeMultiplier * upgradeLevel);
+        currentAttackSpeed = attackSpeed + (upgradeMultiplier * upgradeLevel);
+        damage = Mathf.RoundToInt(originalDamage + upgradeMultiplier * upgradeLevel);
 
         return true;
     }

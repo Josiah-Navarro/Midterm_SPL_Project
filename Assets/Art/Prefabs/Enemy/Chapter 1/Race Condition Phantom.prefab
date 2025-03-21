@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -185,13 +185,14 @@ MonoBehaviour:
   worth: 50
   originalSpeed: 1.5
   isConverted: 1
-  originalHitpoints: 0
+  pathIndex: 0
+  path: []
+  target: {fileID: 0}
   moveSpeed: 0
   slowFactor: 1
   isDestroyed: 0
   isFrozen: 0
-  target: {fileID: 0}
-  pathIndex: 0
+  originalHitpoints: 0
   minSpeedMultiplier: 0.5
   maxSpeedMultiplier: 2
   speedChangeInterval: 2

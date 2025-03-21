@@ -4,8 +4,9 @@ public class Homing : BaseBullet
 {
     void FixedUpdate()
     {
-        if(!target) return;
+        if (!target) return;
+
         Vector2 direction = (target.position - transform.position).normalized;
-        rb.linearVelocity = direction * bulletSpeed;
+        rb.linearVelocity = direction * bulletSpeed; // Use `velocity` instead of `linearVelocity`
     }
 }

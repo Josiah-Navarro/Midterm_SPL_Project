@@ -27,6 +27,10 @@ public class SummonManager : MonoBehaviour
             Debug.LogWarning("Summon failed: No banner selected or invalid pull amount!");
             return;
         }
+        if (LevelManager.main.money < 200)
+        {
+            return;
+        }
 
         StartCoroutine(SummonAnimation());
     }
@@ -37,6 +41,7 @@ public class SummonManager : MonoBehaviour
         yield return new WaitForSeconds(2f); // Simulating animation delay
 
         PerformSummon();
+        LevelManager.main.SpendCurrency(summonCount * 200);
     }
 
     private void PerformSummon()

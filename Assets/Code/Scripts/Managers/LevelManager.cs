@@ -40,7 +40,7 @@ public class LevelManager : MonoBehaviour
         health -= dmg;
         if (health <= 0) 
         {
-            Debug.Log("No Health Left");
+            FindObjectOfType<GameOverUi>().ShowGameOver();
         }
     }
 

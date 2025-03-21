@@ -15,17 +15,17 @@ MonoBehaviour:
   enemies:
   - enemyPrefab: {fileID: 996180211710454622, guid: 4181fc04f09369044b749e0dd572a55d, type: 3}
     count: 80
-    spawnDelay: 0.1
+    spawnDelay: 0.3
   - enemyPrefab: {fileID: 996180211710454622, guid: e0b2e86f2e7b38d449849aa63ab50326, type: 3}
     count: 20
-    spawnDelay: 0.2
+    spawnDelay: 0.5
   - enemyPrefab: {fileID: 996180211710454622, guid: 223395200c557de46ad26eb4abff3993, type: 3}
     count: 10
-    spawnDelay: 0.2
+    spawnDelay: 0.4
   - enemyPrefab: {fileID: 996180211710454622, guid: b9a657bbe24159042af0d7ad02e4f471, type: 3}
     count: 80
-    spawnDelay: 0.1
+    spawnDelay: 0.5
   - enemyPrefab: {fileID: 996180211710454622, guid: b97d0c3ad42d9d944bc9e554cf9c511f, type: 3}
     count: 20
-    spawnDelay: 0.2
+    spawnDelay: 0.6
   waveDelay: 5
